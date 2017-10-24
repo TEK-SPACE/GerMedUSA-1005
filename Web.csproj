@@ -2132,6 +2132,216 @@
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\sessionTimer.js" />
+    <Content Include="Skins\Default\Css\tekspace.css" />
+    <Content Include="Skins\TekSpace\Css\base.css" />
+    <Content Include="Skins\TekSpace\Css\bootstrap.css" />
+    <Content Include="Skins\TekSpace\Css\font-awesome.css" />
+    <Content Include="Skins\TekSpace\Css\fonts.css" />
+    <Content Include="Skins\TekSpace\Css\receipt.css" />
+    <Content Include="Skins\TekSpace\Css\style.css" />
+    <Content Include="Skins\TekSpace\Css\tekspace.css" />
+    <Content Include="Skins\TekSpace\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Skins\TekSpace\Fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Skins\TekSpace\Images\addaddress.gif" />
+    <Content Include="Skins\TekSpace\Images\affiliateheader.jpg" />
+    <Content Include="Skins\TekSpace\Images\affiliateheader_small.jpg" />
+    <Content Include="Skins\TekSpace\Images\amex.gif" />
+    <Content Include="Skins\TekSpace\Images\arrow.gif" />
+    <Content Include="Skins\TekSpace\Images\arrow_main.gif" />
+    <Content Include="Skins\TekSpace\Images\arrow_right.gif" />
+    <Content Include="Skins\TekSpace\Images\bigrate.gif" />
+    <Content Include="Skins\TekSpace\Images\bigstar-blu.gif" />
+    <Content Include="Skins\TekSpace\Images\bigstar-whi.gif" />
+    <Content Include="Skins\TekSpace\Images\blank.gif" />
+    <Content Include="Skins\TekSpace\Images\bottomgradient.jpg" />
+    <Content Include="Skins\TekSpace\Images\calendar.gif" />
+    <Content Include="Skins\TekSpace\Images\cardinfo.gif" />
+    <Content Include="Skins\TekSpace\Images\cc_americanexpress.jpg" />
+    <Content Include="Skins\TekSpace\Images\cc_diners.gif" />
+    <Content Include="Skins\TekSpace\Images\cc_discover.jpg" />
+    <Content Include="Skins\TekSpace\Images\cc_laser.gif" />
+    <Content Include="Skins\TekSpace\Images\cc_maestro.jpg" />
+    <Content Include="Skins\TekSpace\Images\cc_mastercard.jpg" />
+    <Content Include="Skins\TekSpace\Images\cc_visa.jpg" />
+    <Content Include="Skins\TekSpace\Images\cc_visadebit.gif" />
+    <Content Include="Skins\TekSpace\Images\cc_visaelectron.png" />
+    <Content Include="Skins\TekSpace\Images\cd.gif" />
+    <Content Include="Skins\TekSpace\Images\change.gif" />
+    <Content Include="Skins\TekSpace\Images\check-white.gif" />
+    <Content Include="Skins\TekSpace\Images\check_aba.gif" />
+    <Content Include="Skins\TekSpace\Images\check_account.gif" />
+    <Content Include="Skins\TekSpace\Images\check_micr.gif" />
+    <Content Include="Skins\TekSpace\Images\col.gif" />
+    <Content Include="Skins\TekSpace\Images\continue-shopping.gif" />
+    <Content Include="Skins\TekSpace\Images\control_panel.gif" />
+    <Content Include="Skins\TekSpace\Images\copynewdown.gif" />
+    <Content Include="Skins\TekSpace\Images\creditcards.gif" />
+    <Content Include="Skins\TekSpace\Images\creditcards.jpg" />
+    <Content Include="Skins\TekSpace\Images\delete.gif" />
+    <Content Include="Skins\TekSpace\Images\discover.gif" />
+    <Content Include="Skins\TekSpace\Images\edit2.gif" />
+    <Content Include="Skins\TekSpace\Images\glow.png" />
+    <Content Include="Skins\TekSpace\Images\header_right2.jpg" />
+    <Content Include="Skins\TekSpace\Images\helpcircle.gif" />
+    <Content Include="Skins\TekSpace\Images\home.jpg" />
+    <Content Include="Skins\TekSpace\Images\home1.jpg" />
+    <Content Include="Skins\TekSpace\Images\home2.jpg" />
+    <Content Include="Skins\TekSpace\Images\home3.jpg" />
+    <Content Include="Skins\TekSpace\Images\home4.jpg" />
+    <Content Include="Skins\TekSpace\Images\home_info.gif" />
+    <Content Include="Skins\TekSpace\Images\icons\add_address.png" />
+    <Content Include="Skins\TekSpace\Images\icons\cart.gif" />
+    <Content Include="Skins\TekSpace\Images\icons\check_disabled.png" />
+    <Content Include="Skins\TekSpace\Images\icons\check_enabled.png" />
+    <Content Include="Skins\TekSpace\Images\icons\contact-us.gif" />
+    <Content Include="Skins\TekSpace\Images\icons\delete.png" />
+    <Content Include="Skins\TekSpace\Images\icons\edit.png" />
+    <Content Include="Skins\TekSpace\Images\icons\faq.gif" />
+    <Content Include="Skins\TekSpace\Images\icons\wishlist.gif" />
+    <Content Include="Skins\TekSpace\Images\icons\your-account.gif" />
+    <Content Include="Skins\TekSpace\Images\icon_lock.gif" />
+    <Content Include="Skins\TekSpace\Images\left-nav-bg.gif" />
+    <Content Include="Skins\TekSpace\Images\live-chat.gif" />
+    <Content Include="Skins\TekSpace\Images\loadingshipping.gif" />
+    <Content Include="Skins\TekSpace\Images\logo.jpg" />
+    <Content Include="Skins\TekSpace\Images\logo_vbv.gif" />
+    <Content Include="Skins\TekSpace\Images\magnify.png" />
+    <Content Include="Skins\TekSpace\Images\mailicon.gif" />
+    <Content Include="Skins\TekSpace\Images\mastercard.gif" />
+    <Content Include="Skins\TekSpace\Images\minus.gif" />
+    <Content Include="Skins\TekSpace\Images\moreinfo.gif" />
+    <Content Include="Skins\TekSpace\Images\nav-header-bg.gif" />
+    <Content Include="Skins\TekSpace\Images\net_connections.gif" />
+    <Content Include="Skins\TekSpace\Images\nopicture.gif" />
+    <Content Include="Skins\TekSpace\Images\nopictureicon.gif" />
+    <Content Include="Skins\TekSpace\Images\nopicturemicro.gif" />
+    <Content Include="Skins\TekSpace\Images\orange-bg.gif" />
+    <Content Include="Skins\TekSpace\Images\paypal_promo.gif" />
+    <Content Include="Skins\TekSpace\Images\plus.gif" />
+    <Content Include="Skins\TekSpace\Images\pollimage.gif" />
+    <Content Include="Skins\TekSpace\Images\processrecurring.gif" />
+    <Content Include="Skins\TekSpace\Images\rateit.gif" />
+    <Content Include="Skins\TekSpace\Images\recycle.gif" />
+    <Content Include="Skins\TekSpace\Images\redarrow.gif" />
+    <Content Include="Skins\TekSpace\Images\redarrowleft.gif" />
+    <Content Include="Skins\TekSpace\Images\registercheckout.gif" />
+    <Content Include="Skins\TekSpace\Images\rstarb.gif" />
+    <Content Include="Skins\TekSpace\Images\rstarg.gif" />
+    <Content Include="Skins\TekSpace\Images\rstars.gif" />
+    <Content Include="Skins\TekSpace\Images\rtarrow.gif" />
+    <Content Include="Skins\TekSpace\Images\scrollDown.gif" />
+    <Content Include="Skins\TekSpace\Images\scrollUp.gif" />
+    <Content Include="Skins\TekSpace\Images\scroll_down.gif" />
+    <Content Include="Skins\TekSpace\Images\scroll_up.gif" />
+    <Content Include="Skins\TekSpace\Images\seal.png" />
+    <Content Include="Skins\TekSpace\Images\securecode.jpg" />
+    <Content Include="Skins\TekSpace\Images\securecode_logo_learn_more.gif" />
+    <Content Include="Skins\TekSpace\Images\SecureLock.gif" />
+    <Content Include="Skins\TekSpace\Images\selected.gif" />
+    <Content Include="Skins\TekSpace\Images\shadow.png" />
+    <Content Include="Skins\TekSpace\Images\showlarger.gif" />
+    <Content Include="Skins\TekSpace\Images\signcheckout.gif" />
+    <Content Include="Skins\TekSpace\Images\signin.jpg" />
+    <Content Include="Skins\TekSpace\Images\skipcheckout.gif" />
+    <Content Include="Skins\TekSpace\Images\spacer.gif" />
+    <Content Include="Skins\TekSpace\Images\spacer_pack.gif" />
+    <Content Include="Skins\TekSpace\Images\spacer_pack_double.gif" />
+    <Content Include="Skins\TekSpace\Images\spinner.gif" />
+    <Content Include="Skins\TekSpace\Images\Stare.gif" />
+    <Content Include="Skins\TekSpace\Images\starf.gif" />
+    <Content Include="Skins\TekSpace\Images\starh.gif" />
+    <Content Include="Skins\TekSpace\Images\sub-nav-fade.gif" />
+    <Content Include="Skins\TekSpace\Images\tabdark.gif" />
+    <Content Include="Skins\TekSpace\Images\tab_out.gif" />
+    <Content Include="Skins\TekSpace\Images\tab_over.gif" />
+    <Content Include="Skins\TekSpace\Images\topgradient.jpg" />
+    <Content Include="Skins\TekSpace\Images\topNavBg.png" />
+    <Content Include="Skins\TekSpace\Images\vbv.jpg" />
+    <Content Include="Skins\TekSpace\Images\vbv_logo_learn_more.gif" />
+    <Content Include="Skins\TekSpace\Images\verificationnumber.gif" />
+    <Content Include="Skins\TekSpace\Images\verifiedbyvisa.jpg" />
+    <Content Include="Skins\TekSpace\Images\visa.gif" />
+    <Content Include="Skins\TekSpace\Images\y.gif" />
+    <Content Include="Skins\TekSpace\Installation\Installation.sql" />
+    <Content Include="Skins\TekSpace\Scripts\bootstrap.js" />
+    <Content Include="Skins\TekSpace\SkinInfo\preview.jpg" />
+    <Content Include="Skins\TekSpace\SkinInfo\skininfo.xml" />
+    <Content Include="Skins\TekSpace\snow\css\bootstrap.css" />
+    <Content Include="Skins\TekSpace\snow\css\chocolat.css" />
+    <Content Include="Skins\TekSpace\snow\css\font-awesome.min.css" />
+    <Content Include="Skins\TekSpace\snow\css\jquery-ui.css" />
+    <Content Include="Skins\TekSpace\snow\css\style.css" />
+    <Content Include="Skins\TekSpace\snow\fonts\fontawesome-webfont.svg" />
+    <Content Include="Skins\TekSpace\snow\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Skins\TekSpace\snow\images\arr.png" />
+    <Content Include="Skins\TekSpace\snow\images\arrows.png" />
+    <Content Include="Skins\TekSpace\snow\images\ban-sky1.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\ban-sky2.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\bann2.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\banner1433.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\banner5.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\cal.png" />
+    <Content Include="Skins\TekSpace\snow\images\cal1.png" />
+    <Content Include="Skins\TekSpace\snow\images\close-1.png" />
+    <Content Include="Skins\TekSpace\snow\images\closew.gif" />
+    <Content Include="Skins\TekSpace\snow\images\g1.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g10.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g11.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g12.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g2.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g3.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g4.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g5.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g61.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g7.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g8.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\g9.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz1.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz10.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz11.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz12.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz2.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz3.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz4.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz5.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz6.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz7.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz8.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\gz9.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\l1.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\l2.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\l3.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\l4.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\l5.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\l6.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\l7.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\l8.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\l91.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\left-1.png" />
+    <Content Include="Skins\TekSpace\snow\images\leftw.gif" />
+    <Content Include="Skins\TekSpace\snow\images\m1.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\news-3.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\news-4.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\preloader.gif" />
+    <Content Include="Skins\TekSpace\snow\images\right-1.png" />
+    <Content Include="Skins\TekSpace\snow\images\ser1.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\t1.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\t2.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\t3.jpg" />
+    <Content Include="Skins\TekSpace\snow\images\t4.jpg" />
+    <Content Include="Skins\TekSpace\snow\js\bootstrap-3.1.1.min.js" />
+    <Content Include="Skins\TekSpace\snow\js\classie.js" />
+    <Content Include="Skins\TekSpace\snow\js\easing.js" />
+    <Content Include="Skins\TekSpace\snow\js\grid3d.js" />
+    <Content Include="Skins\TekSpace\snow\js\helper.js" />
+    <Content Include="Skins\TekSpace\snow\js\jquery-2.1.4.min.js" />
+    <Content Include="Skins\TekSpace\snow\js\jquery-ui.js" />
+    <Content Include="Skins\TekSpace\snow\js\jquery.chocolat.js" />
+    <Content Include="Skins\TekSpace\snow\js\modernizr.js" />
+    <Content Include="Skins\TekSpace\snow\js\move-top.js" />
+    <Content Include="Skins\TekSpace\snow\js\responsiveslides.min.js" />
+    <Content Include="Skins\TekSpace\snow\js\SmoothScroll.min.js" />
+    <Content Include="Skins\TekSpace\Topics\styleguide.htm" />
     <Content Include="Skins\Default\Css\base.css" />
     <Content Include="Skins\Default\Css\bootstrap.css" />
     <Content Include="Skins\Default\Css\font-awesome.css" />
@@ -2486,6 +2696,23 @@
     <Content Include="Skins\Default\Fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Scripts\jquery.validate.bootstrap.js" />
     <Content Include="packages.config" />
+    <Content Include="Skins\TekSpace\Fonts\fontawesome-webfont.eot" />
+    <Content Include="Skins\TekSpace\Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Skins\TekSpace\Fonts\fontawesome-webfont.woff" />
+    <Content Include="Skins\TekSpace\Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Skins\TekSpace\Fonts\FontAwesome.otf" />
+    <Content Include="Skins\TekSpace\Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Skins\TekSpace\Fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Skins\TekSpace\Fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Skins\TekSpace\Fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Skins\TekSpace\Images\home.psd" />
+    <Content Include="Skins\TekSpace\Views\_ViewStart.cshtml" />
+    <Content Include="Skins\TekSpace\Views\Shared\_BodyClose.cshtml" />
+    <Content Include="Skins\TekSpace\Views\Shared\_BodyOpen.cshtml" />
+    <Content Include="Skins\TekSpace\Views\Shared\_Head.cshtml" />
+    <Content Include="Skins\TekSpace\Views\Shared\_Layout.cshtml" />
+    <Content Include="Skins\TekSpace\Views\Shared\_PopupLayout.cshtml" />
+    <Content Include="Skins\TekSpace\XmlPackages\entitymenu.xml.config" />
     <None Include="Skins\Default\Images\home.psd" />
     <Content Include="Views\Notice\_Index.cshtml" />
     <Content Include="Views\Preview\_PreviewBar.cshtml" />
@@ -2585,6 +2812,15 @@
     <Content Include="XmlPackages\upsellproducts.xml.config" />
     <Content Include="Views\GoogleCustomerReviews\_GoogleCustomerReviewsBadge.cshtml" />
     <Content Include="Views\GoogleCustomerReviews\_GoogleCustomerReviewsOptInSurvey.cshtml" />
+    <Content Include="Skins\TekSpace\snow\fonts\fontawesome-webfont.eot" />
+    <Content Include="Skins\TekSpace\snow\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Skins\TekSpace\snow\fonts\fontawesome-webfont.woff" />
+    <Content Include="Skins\TekSpace\snow\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Skins\TekSpace\snow\fonts\FontAwesome.otf" />
+    <Content Include="Skins\TekSpace\snow\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Skins\TekSpace\snow\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Skins\TekSpace\snow\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Skins\TekSpace\snow\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="XmlPackages\xmlpackage.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -2595,44 +2831,153 @@
   <ItemGroup>
     <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Skins\Default\Images\paymentOptions\" />
+    <Folder Include="Skins\TekSpace\Images\paymentOptions\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="AspDotNetStorefrontCommon"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefrontCommon.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefrontControls"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefrontControls.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefrontCore"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefrontCore.dll</HintPath></Reference>
-    <Reference Include="GatewayAmazonPayments"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayAmazonPayments.dll</HintPath></Reference>
-    <Reference Include="GatewayAuthorizeNet"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayAuthorizeNet.dll</HintPath></Reference>
-    <Reference Include="GatewayBraintree"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayBraintree.dll</HintPath></Reference>
-    <Reference Include="GatewayCybersource"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayCybersource.dll</HintPath></Reference>
-    <Reference Include="GatewayEProcessingNetwork"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayEProcessingNetwork.dll</HintPath></Reference>
-    <Reference Include="GatewayManual"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayManual.dll</HintPath></Reference>
-    <Reference Include="GatewayMicropay"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayMicropay.dll</HintPath></Reference>
-    <Reference Include="GatewayMoneris"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayMoneris.dll</HintPath></Reference>
-    <Reference Include="GatewayPayFlowPro"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayPayFlowPro.dll</HintPath></Reference>
-    <Reference Include="GatewayQBMerchantServices"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayQBMerchantServices.dll</HintPath></Reference>
-    <Reference Include="GatewaySagePayments"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewaySagePayments.dll</HintPath></Reference>
-    <Reference Include="GatewaySagePayUK"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewaySagePayUK.dll</HintPath></Reference>
-    <Reference Include="GatewaySkipjack"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewaySkipjack.dll</HintPath></Reference>
-    <Reference Include="GatewayTwoCheckout"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayTwoCheckout.dll</HintPath></Reference>
-    <Reference Include="GatewayUSAePay"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayUSAePay.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront.Application"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.Application.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront.Auth"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.Auth.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront.Caching"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.Caching.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront.Checkout"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.Checkout.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront.Controllers"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.Controllers.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront.Entry"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.Entry.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront.Filters"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.Filters.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront.Models"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.Models.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront.Routing"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.Routing.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront.Validation"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.Validation.dll</HintPath></Reference>
-    <Reference Include="GatewayPayPal"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\GatewayPayPal.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefrontGateways"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefrontGateways.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefrontWSI"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefrontWSI.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefrontBuySafe"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefrontBuySafe.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefrontEventHandlers"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefrontEventHandlers.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefrontPromotions"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefrontPromotions.dll</HintPath></Reference>
-    <Reference Include="AspDotNetStorefront"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\AspDotNetStorefront.dll</HintPath></Reference>
-    <Reference Include="XsltObjects"><SpecificVersion>False</SpecificVersion><HintPath>..\AssemblyReferences\XsltObjects.dll</HintPath></Reference>
+    <Reference Include="AspDotNetStorefrontCommon">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefrontCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefrontControls">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefrontControls.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefrontCore">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefrontCore.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayAmazonPayments">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayAmazonPayments.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayAuthorizeNet">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayAuthorizeNet.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayBraintree">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayBraintree.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayCybersource">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayCybersource.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayEProcessingNetwork">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayEProcessingNetwork.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayManual">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayManual.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayMicropay">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayMicropay.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayMoneris">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayMoneris.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayPayFlowPro">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayPayFlowPro.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayQBMerchantServices">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayQBMerchantServices.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewaySagePayments">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewaySagePayments.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewaySagePayUK">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewaySagePayUK.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewaySkipjack">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewaySkipjack.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayTwoCheckout">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayTwoCheckout.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayUSAePay">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayUSAePay.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront.Application">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront.Auth">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront.Caching">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront.Checkout">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.Checkout.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront.Controllers">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront.Entry">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.Entry.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront.Filters">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.Filters.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront.Models">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront.Routing">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.Routing.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront.Validation">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="GatewayPayPal">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\GatewayPayPal.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefrontGateways">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefrontGateways.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefrontWSI">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefrontWSI.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefrontBuySafe">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefrontBuySafe.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefrontEventHandlers">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefrontEventHandlers.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefrontPromotions">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefrontPromotions.dll</HintPath>
+    </Reference>
+    <Reference Include="AspDotNetStorefront">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\AspDotNetStorefront.dll</HintPath>
+    </Reference>
+    <Reference Include="XsltObjects">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\XsltObjects.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
