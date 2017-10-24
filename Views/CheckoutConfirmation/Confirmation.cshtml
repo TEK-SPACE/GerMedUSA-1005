@@ -1,0 +1,29 @@
+﻿@model OrderConfirmationViewModel
+
+@Html.Raw(Model.Body)
+
+@if(Model.ShowGoogleTrackingCode)
+{
+	@Html.Raw(Model.GoogleTrackingCode);
+}
+
+@if(Model.ShowGeneralTrackingCode)
+{
+	@Html.Raw(Model.GeneralTrackingCode);
+}
+
+@if(Model.ShowGoogleCustomerReviews)
+{
+	@Html.Action(
+		ActionNames.GoogleCustomerReviewsOptInSurvey,
+		ControllerNames.GoogleCustomerReviews,
+		new { orderNumber = Model.OrderNumber })
+}
+
+@if(Model.AddBuySafeScript)
+{
+	@Html.Action(
+		ActionNames.BuySafeGuarantee,
+		ControllerNames.CheckoutConfirmation,
+		new { orderNumber = Model.OrderNumber })
+}

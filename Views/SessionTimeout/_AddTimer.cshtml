@@ -1,0 +1,77 @@
+﻿@model AddTimerViewModel
+@{ Layout = null; }
+
+@if(Model.Enabled)
+{
+		<div class="modal session-modal js-session-warning-modal" data-backdrop="static">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						@Html.Topic("SessionExpiring")
+					</div>
+					<div class="modal-footer">
+						<a id="resetSessionTimer" class="btn btn-primary session-button" data-role="button">@Html.StringResource("sessiontimer.expiringbuttontext")</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal session-modal js-session-expired-modal" data-backdrop="static">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						@Html.Topic("SessionExpired")
+					</div>
+					<div class="modal-footer">
+						<a id="sessionExpired" class="btn btn-primary session-button" data-role="button">@Html.StringResource("sessiontimer.expiredbuttontext")</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	@Html.RegisterScriptBundle(
+		bundleUrl: ScriptBundlePaths.SkinBundle,
+		url: ScriptPaths.SessionTimer,
+		dependencies: new[]
+		{
+			ScriptPaths.JQuery.AdnsfAlias,
+		});
+
+	@Html.RegisterInlineScript(
+		@<script type="text/javascript">
+			adnsf$(document).ready(function() {
+				// now prep the session javascript
+				var warningModalSelector = '.js-session-warning-modal';
+				var expiredModalSelector = '.js-session-expired-modal';
+
+				var sessionTimer = SessionTimer({
+					sessionTimeoutInMilliseconds: @Model.SessionTimeout.TotalMilliseconds,
+					refreshUrl: @Html.JavascriptString(@Model.RefreshUrl),
+					warningCallback: function() {
+						$(warningModalSelector).modal('show');
+					},
+					expiredCallback: function() {
+						$(expiredModalSelector).modal('show');
+					},
+					refreshedCallback: function() {
+						$(warningModalSelector).modal('hide');
+					}
+				});
+
+				adnsf$("#resetSessionTimer").click(function(event) {
+					sessionTimer.refresh(true);
+				});
+
+				adnsf$("#sessionExpired").click(function(event) {
+					location.reload();
+				});
+
+				sessionTimer.start();
+			});
+		</script>,
+	dependencies: new[]
+	{
+		ScriptPaths.JQuery.AdnsfAlias,
+		ScriptPaths.SessionTimer,
+	})
+}

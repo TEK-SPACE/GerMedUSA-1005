@@ -1,0 +1,191 @@
+﻿@model AddressDetailViewModel
+
+@Html.HiddenFor(m => m.Address.Id)
+@Html.HiddenFor(m => m.MakePrimary)
+
+<div class="address-control">
+
+
+	<div id="country-field">
+		@Html.DropDownListEntryFor(
+			expression: m => m.Address.Country,
+			values: Model.CountryOptions,
+			@class: "country js-country",
+			id: "ddlCountries")
+	</div>
+
+	@if(Model.ShowNickName)
+	{
+		@Html.EditorEntryFor(
+			expression: m => m.Address.NickName,
+			@class: "nick-name")
+	}
+	<div class="row">
+		<div class="col-sm-6">
+			@Html.EditorEntryFor(
+				expression: m => m.Address.FirstName,
+				@class: "first-name")
+		</div>
+		<div class="col-sm-6">
+			@Html.EditorEntryFor(
+				expression: m => m.Address.LastName,
+				@class: "last-name")
+		</div>
+	</div>
+
+	@Html.EditorEntryFor(
+		expression: m => m.Address.Phone,
+		@class: "phone-number")
+
+
+	@if(Model.ShowCompanyField)
+	{
+		@Html.EditorEntryFor(
+		expression: m => m.Address.Company,
+		@class: "company")
+	}
+
+
+	@Html.EditorEntryFor(
+		expression: m => m.Address.Address1,
+		@class: "address-one")
+
+	<div class="row">
+		<div class="col-sm-6">
+			@Html.EditorEntryFor(
+				expression: m => m.Address.Address2,
+				@class: "address-two")
+		</div>
+		<div class="col-sm-6">
+			@Html.EditorEntryFor(
+				expression: m => m.Address.Suite,
+				@class: "suite")
+		</div>
+	</div>
+
+	@if(Model.ShowResidenceTypeField)
+	{
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label class="form-label form-label-required">
+						<span class="form-label-prefix form-label-prefix-required">
+							@Html.StringResource("label.requiredPrefix")
+						</span>
+						<span class="form-label-wrap">@Html.StringResource("address.type.label")</span>
+						<span class="form-label-suffix form-label-suffix-required">@Html.StringResource("label.requiredSuffix")</span>
+					</label>
+
+					<div class="entry-feedback-wrapper">
+						@Html.DropDownListFor(m => m.Address.ResidenceType, Model.ResidenceTypeOptions, new
+						   {
+							   @class = "form-control"
+						   })
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+
+	@Html.EditorEntryFor(
+		expression: m => m.Address.Zip,
+		@class: "postal-code js-postal-code")
+
+	<div class="row">
+		<div class="col-sm-6">
+			@Html.EditorEntryFor(
+				expression: m => m.Address.City,
+				@class: "city")
+		</div>
+		<div class="col-sm-6">
+			@Html.DropDownListEntryFor(
+				expression: m => m.Address.State,
+				values: Model.StateOptions,
+				@class: "state js-state",
+				id: "ddlStates")
+		</div>
+	</div>
+
+</div>
+
+@Html.RegisterScriptBundle(
+	bundleUrl: ScriptBundlePaths.CheckoutBundle,
+	url: ScriptPaths.CountryAndState,
+	dependencies: new[]
+	{
+		ScriptPaths.JQuery.AdnsfAlias,
+	})
+
+@Html.RegisterInlineScript(
+	@<script>
+		SelectDataBinder
+			.BindCountryAndStates('#ddlCountries', '#ddlStates', '@Url.Action(ActionNames.States, ControllerNames.Country)');
+
+		(function ($, enablePostalCodeLookup) {
+
+			function toggleInternationalUI(isInternational) {
+				$('.js-state .form-label-wrap').text(isInternational
+					? @Html.JavascriptString(AppLogic.GetString("address.region.label"))
+					: @Html.JavascriptString(AppLogic.GetString("address.state.label")));
+
+				$('.js-postal-code .form-label-wrap').text(isInternational
+					? @Html.JavascriptString(AppLogic.GetString("address.postalcode.label"))
+					: @Html.JavascriptString(AppLogic.GetString("address.zip.label")));
+
+				$('.js-postal-code .text-box').attr("placeholder", isInternational
+					? ''
+					: @Html.JavascriptString(AppLogic.GetString("address.zip.example")));
+			}
+
+			function lookupPostalCode(postalCode, countryCode) {
+				// Track the user changing values midstream.
+				var initialCityValue = $('#Address_City').val();
+				var initialStateValue = $('#ddlStates').val();
+
+				var apiEndpoint = @Html.JavascriptString(@Url.Action(ActionNames.PostalCodeLookup, ControllerNames.Address))
+					+ '?postalcode=' + postalCode + '&countrycode=' + countryCode;
+
+				$.get(apiEndpoint)
+					.done(function (data) {
+						var $addressCity = $('#Address_City');
+						var $ddlStates = $('#ddlStates');
+
+						// If the user hasn't changed any values, then set the fields to the received values.
+						if($addressCity.val() == initialCityValue)
+							$addressCity.val(data.City);
+
+						if($ddlStates.val() == initialStateValue)
+							$ddlStates.val(data.State);
+					});
+			}
+
+			function isSelectedCountryInternational() {
+				return $('.js-country option:selected').val() != 'United States';
+			}
+
+			$(document).ready(function () {
+				$('#Address_FirstName')
+					.focus();
+
+				toggleInternationalUI(isSelectedCountryInternational());
+
+				$('.js-country').change(function() {
+					toggleInternationalUI(isSelectedCountryInternational());
+				});
+
+				$('.js-postal-code .text-box').change(function () {
+					if (!enablePostalCodeLookup)
+						return;
+
+					lookupPostalCode(
+						$('.js-postal-code .text-box').val(),
+						$('.js-country option:selected').val());
+				});
+			});
+		})(adnsf$, @Html.JavascriptBool(Model.ShowPostalCodeLookup));
+	</script>,
+	dependencies: new[]
+	{
+		ScriptPaths.JQuery.AdnsfAlias,
+		ScriptPaths.CountryAndState,
+	})

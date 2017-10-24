@@ -1,0 +1,72 @@
+﻿10/24/2017 6:51:14 PM: Starting AspDotNetStorefront...
+
+10/24/2017 6:51:14 PM: AppLogic.ApplicationStart...
+
+10/24/2017 6:51:14 PM: Testing DBConn...
+
+10/24/2017 6:51:14 PM: DBConn OK.
+
+10/24/2017 6:51:14 PM: Determine Trust Level...
+
+10/24/2017 6:51:14 PM: Determine Trust Level OK.
+
+10/24/2017 6:51:14 PM: ExcelToXml.SetLicense...
+
+10/24/2017 6:51:14 PM: ExcelToXml.SetLicense OK.
+
+10/24/2017 6:51:14 PM: AppConfig Load...
+
+10/24/2017 6:51:14 PM: AppConfig Load OK.
+
+10/24/2017 6:51:14 PM: EventHandler Load...
+
+10/24/2017 6:51:14 PM: EventHandler Load OK.
+
+10/24/2017 6:51:14 PM: BadWord Load...
+
+10/24/2017 6:51:14 PM: BadWord Load OK.
+
+10/24/2017 6:51:14 PM: Load StringResources...
+
+10/24/2017 6:51:14 PM: Load StringResources OK.
+
+10/24/2017 6:51:14 PM: Load EntityHelpers...
+
+10/24/2017 6:51:15 PM: Load EntityHelpers OK.
+
+10/24/2017 6:51:15 PM: Load Tax Tables...
+
+10/24/2017 6:51:15 PM: Load Tax Tables OK.
+
+10/24/2017 6:51:15 PM: Setup 49...
+
+10/24/2017 6:51:15 PM: Setup 49 OK.
+
+10/24/2017 6:51:15 PM: CustomerSession.StaticClear...
+
+10/24/2017 6:51:15 PM: CustomerSession.StaticClear OK.
+
+10/24/2017 6:51:15 PM: Load CustomerLevels...
+
+10/24/2017 6:51:15 PM: Load CustomerLevels OK.
+
+10/24/2017 6:51:15 PM: CC Check...
+
+10/24/2017 6:51:15 PM: CC Check OK.
+
+10/24/2017 6:51:15 PM: NextKeyChangeCheck...
+
+10/24/2017 6:51:15 PM: NextKeyChangeCheck OK.
+
+10/24/2017 6:51:15 PM: Legacy ConvertAllPasswords...
+
+10/24/2017 6:51:15 PM: Legacy ConvertAllPasswords OK.
+
+10/24/2017 6:51:15 PM: Legacy UpgradeEncryption...
+
+10/24/2017 6:51:15 PM: Legacy UpgradeEncryption OK.
+
+10/24/2017 6:51:15 PM: AppLogic.ApplicationStart OK.
+
+10/24/2017 6:51:15 PM: AspDotNetStorefront Started OK.
+
