@@ -1,3 +1,53 @@
 .logo-wrap img{
 	max-width:200px;
 }
+.about-right-grid h3,
+.about-left-grid h3 {
+    font-family: inherit !important;
+}
+.slider-info {
+    /*display: none;*/
+}
+    .slider-info h3 {
+        font-family: inherit !important;
+        color: rgb(255, 0, 92) !important;
+        text-shadow: 2px 2px #000 !important;
+        font-size: 4em !important;
+        text-transform: capitalize !important;
+    }
+    .readmore-w3 {
+        display: none;
+    }
+ul.callbacks_tabs.callbacks1_tabs { top: 95%; }
+.w3-services-grid-icon1 i.fa.fa-home, i.fa.fa-plane, i.fa.fa-users, i.fa.fa-star,
+i.fa.fa-wrench,
+i.fa.fa-leaf,
+i.fa.fa-bullseye {
+    margin-right: 0.5em;
+    font-size: 1.5em;
+    color: #fff;
+}
+.col-sm-3.col-xs-6.product-grid-item {
+    min-height: 292px;
+}
+.form-group.add-to-cart-group {
+    position: absolute;
+    top: 265px;
+}
+.row.featured-item-row {
+    margin-bottom: 25px;
+}
+.w3-news-grid1-right p {
+    width: 80% !important;
+    margin: 1em 0 0em 3em !important;
+    overflow: hidden;
+    max-height: 200px;
+    text-align: justify;
+}
+p {
+    text-align: justify;
+}
+
+.about-right-grid h5 {
+    text-align: JUSTIFY;
+}

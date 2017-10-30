@@ -1,621 +1,124 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    @Html.Partial("_Head")
-    <script type="application/x-javascript">
-        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-               function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <!-- //for-mobile-apps -->
-    
-    <link href="~/Skins/TekSpace/snow/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="~/Skins/TekSpace/snow/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
-    <link href="~/Skins/TekSpace/snow/css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- Chocolat-CSS -->
-    <link rel="stylesheet" href="~/Skins/TekSpace/snow/css/chocolat.css" type="text/css" media="all">
-    <link href="//fonts.googleapis.com/css?family=Montserrat+Alternates:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <!--//fonts-->
-    <!-- Supportive-JavaScript -->
-    <script src="~/Skins/TekSpace/snow/js/modernizr.js"></script>
-    <!-- //Supportive-JavaScript -->
-
-
+	@Html.Partial("_Head")
 </head>
 <body>
-    <!--Header-->
-    <div class="header" id="home">
-        <!--Top-Bar-->
-        <div class="top-bar">
-            <div class="container-fluid">
-                <div class="header-nav">
-                    <nav class="navbar navbar-default">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <h1><a class="navbar-brand" href="index.html">
-                                @Html.Topic("Template.Logo")
-                            </a></h1>
-                        </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-                            <nav class="cl-effect-15" id="cl-effect-15">
-                                <ul>
-                                    <li><a href="#home" class="active" data-hover="Home">Home</a></li>
-                                    <li><a href="#about" class="scroll" data-hover="About">About</a></li>
-                                    <li><a href="#services" class="scroll" data-hover="Services">Services</a></li>
-                                    <li><a href="#locations" class="scroll" data-hover="Locations">Locations</a></li>
-                                    <li><a href="#gallery" class="scroll" data-hover="Gallery">Gallery</a></li>
-                                    <li><a href="#contact" class="scroll" data-hover="Contact">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <!--//Top-Bar-->
-        <!--Slider-->
-        <div class="slider">
-            <div class="callbacks_container">
-                <ul class="rslides" id="slider">
-                    <li>
-                        <div class="slider-img slider-img1 ">
-                        </div>
-                        <div class="slider-info">
+	@Html.Partial("_BodyOpen")
+	<div class="background">
+		<div class="body-background">
+			<div class="container">
+				<div class="row header-row">
+					<div class="col-sm-5 logo-wrap">
+					    @*@Html.Topic("Template.Logo")*@
+					    <img src="~/Skins/TekSpace/Images/Germedusa_logo.png" />
+					</div>
+					<div class="col-sm-7 text-right-sm header-cart">
+						@Html.Action(ActionNames.Index, ControllerNames.UserLinks)
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="navbar navbar-default topnav" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand visible-xs menu-label" data-toggle="collapse" data-target="#top-nav-collapse" href="#">
+							@Html.StringResource("responsiveskin.menulabel")
+						</a>
+					</div>
+					<div class="navbar-collapse collapse" id="top-nav-collapse">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									@Html.StringResource("responsiveskin.categorymenulabel")
+									<span class="caret"></span>
+								</a>
+								@Html.XmlPackage("entitymenu", new { entitytype = "category" })
+							</li>
+							@*<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									@Html.StringResource("responsiveskin.manufacturermenulabel")
+									<span class="caret"></span>
+								</a>
+								@Html.XmlPackage("entitymenu", new { entitytype = "manufacturer" })
+							</li>*@
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									@Html.StringResource("responsiveskin.accountmenulabel")
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="@Url.Action(ActionNames.Index, ControllerNames.Account)">
+											@Html.StringResource("responsiveskin.accountlabel")
+										</a>
+									</li>
+									<li>
+										<a href="@Url.Action(ActionNames.Index, ControllerNames.Account)#OrderHistory">
+											@Html.StringResource("responsiveskin.orderhistorylabel")
+										</a>
+									</li>
+									@if(AppLogic.AppConfigBool("ShowWishButtons"))
+									{
+										<li>
+											<a href="#miniwish-modal" data-toggle="modal">
+												@Html.StringResource("responsiveskin.wishlistlabel")
+											</a>
+										</li>
+									}
+									<li class="divider"></li>
+									<li>
+										@Html.Action(ActionNames.LoginLinks, ControllerNames.UserLinks)
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="nav navbar-nav navbar-right navbar-form search-wrap">
+							@Html.Partial(ViewNames.SearchPartial)
+						</div>
+					</div>
+				</div>
+				<div class="notices">
+					@Html.Action(ActionNames.Index, ControllerNames.Notice)
+				</div>
+				@Html.Action(
+					actionName: "Detail",
+					controllerName: "Breadcrumb",
+					routeValues: new
+					{
+						PageTitle = ViewBag.PageTitle,
+						PathInfo = ViewBag.PathInfo
+					})
+				<div class="body-wrapper">
+					<!-- Contents start -->
+					@RenderBody()
+					<!-- Contents end -->
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				@Html.Topic("Template.footer")
+				<div class="sub-footer">
+					@Html.Topic("Template.SubFooter")
+				</div>
+			</div>
+		</div>
+	</div>
 
-                            <h3>Lorem ipsum dolor sit</h3>
-                            <p>Lorem ipsum dolor amet, consectetur adipiscing</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="slider-img slider-img2">
+	<!-- Minicart modal -->
+	@Html.Action(ActionNames.Index, ControllerNames.Minicart, new { cartType = CartTypeEnum.ShoppingCart })
 
-                        </div>
-                        <div class="slider-info">
+	<!-- Miniwish modal -->
+	@Html.Action(ActionNames.Index, ControllerNames.Minicart, new { cartType = CartTypeEnum.WishCart })
 
-                            <h3>Quis nostrud exercitati </h3>
-                            <p>Curabitur laoreet Nunc condimentum laoreet.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="slider-img slider-img3">
-
-                        </div>
-                        <div class="slider-info">
-
-                            <h3>Cupidatat non proident</h3>
-                            <p>Lorem ipsum dolor amet, consectetur adipiscing</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="slider-img slider-img4">
-                        </div>
-                        <div class="slider-info">
-                            <h3>Quis autem eum reprehe</h3>
-                            <p>Curabitur laoreet Nunc condimentum laoreet.</p>
-                        </div>
-                    </li>
-
-                </ul>
-
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="readmore-w3">
-            <a class="readmore" href="#" data-toggle="modal" data-target="#myModal1">Read More</a>
-        </div>
-        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
-            <!-- Modal1 -->
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4>Snow Zone</h4>
-                        <img src="~/Skins/TekSpace/snow/images/bann2.jpg" alt=" " class="img-responsive">
-                        <h5>Lorem Ipsum</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //Modal1 -->
-        <!--//Slider-->
-    </div>
-<div class="main" id="main">
-<!--//Header-->
-@RenderBody()
-<!--/about-->
-<div class="w3-aglie-about" id="about">
-    <div class="container">
-        <div class="w3-agile-about-grids">
-            <div class="col-md-6 about-left-grid">
-                <h4>OUR STORY</h4>
-                <h3>ABOUT OUR <span>TRIP</span></h3>
-                <h5><span><i class="fa fa-check" aria-hidden="true"></i></span>Lorem ipsum dolor </h5>
-                <p>Fusce convallis, ante non sodales dapibus, risus mauris viverra nibh, vel lacinia erat nulla at est. Vestibulum vestibulum risus ac eros luctus, at dapibus libero gravida. Cras euismod, felis non egestas gravida, nisi purus placerat lacus, sed pulvinar ipsum turpis sed risus. </p>
-                <h5><span><i class="fa fa-check" aria-hidden="true"></i></span>sed pulvi ipsum</h5>
-                <p>Fusce convallis, ante non sodales dapibus, risus mauris viverra nibh, vel lacinia erat nulla at est. Vestibulum vestibulum risus ac eros luctus, at dapibus libero gravida. Cras euismod, felis non egestas gravida, nisi purus placerat lacus, sed pulvinar ipsum turpis sed risus. </p>
-                <h6><a href="#">view Services</a></h6>
-            </div>
-            <div class="col-md-6 about-right-grid">
-                <h4>OUR STORY</h4>
-                <h3>Why<span>CHOOSE</span>US</h3>
-                <h5>Quisque nisl felis, commodo vel urna ut, convallis vestibulum purus. Praesent eget libero id ligula ultrices aliquet eget eget diam. Sed at est dapibus, fringilla nisi vel, porta elit. Mauris tincidunt est erat, vitae aliquet massa molestie at. Sed in arcu sed ligula</h5>
-                <p>Mauris dictum pharetra mi, id tincidunt mauris rutrum in. Sed pharetra tempus massa, in lobortis magna commodo sed. Phasellus sed magna massa. Praesent pharetra rhoncus lacus. Sed consequat lacus vitae eros laoreet, non vehicula nunc congue. Vestibulum et ex fermentum, pulvinar erat vitae, accumsan leo. Vivamus est tortor, imperdiet ut dictum in, tincidunt at erat.</p>
-                <h6><a href="#">know more</a></h6>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<!--//about-->
-<!--/services-->
-<div class="w3-agile-services" id="services">
-    <div class="container">
-        <div class="w3-services-head">
-            <h3>Services</h3>
-        </div>
-        <div class="col-md-7 w3-services-grids">
-            <div class="w3-services-grids-left">
-                <div class="col-md-6 w3-services-grid-icon1 w3-border-bootom1">
-                    <h3><span><i class="fa fa-home" aria-hidden="true"></i></span>Housing</h3>
-                    <p>Nunc neque mi, scelerisque et ex ut, ultricies ultrices orci. Sed dignissim, metus a vestibulum pharedir</p>
-                </div>
-                <div class="col-md-6 w3-services-grid-icon-text w3-border-bootom2">
-                    <h3><span><i class="fa fa-plane" aria-hidden="true"></i></span>Travel</h3>
-                    <p>poly neque mi, scelerisque et ex ut, ultricies ultrices orci. Sed dignissim, metus a vestibulum pharedum</p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="w3-agile-grid-left-bottom">
-                <div class="col-md-6 w3-services-grid-icon1 w3-border-left">
-                    <h3><span><i class="fa fa-users" aria-hidden="true"></i></span>Agents</h3>
-                    <p>murc neque mi, scelerisque et ex ut, ultricies ultrices orci. Sed dignissim, metus a vestibulum pharetrp</p>
-                </div>
-                <div class="col-md-6 w3-services-grid-icon-text w3-border-left">
-                    <h3><span><i class="fa fa-star" aria-hidden="true"></i></span> Trip</h3>
-                    <p>Nasr neque mi, scelerisque et ex ut, ultricies ultrices orci. Sed dignissim, metus a vestibulum pharemom</p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-        <div class="col-md-5 w3-services-grids-right">
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!--//services-->
-<!-- Downloads -->
-<div class="wthreelocationsaits" id="locations">
-    <div class="container">
-        <div class="location-w3-head">
-            <h3>Downloads</h3>
-        </div>
-        <section class="grid3d vertical" id="grid3d">
-            <div class="grid-wrap">
-                <div class="grid">
-                    <figure class="col-md-4 effect-zoe"><img src="~/Skins/TekSpace/snow/images/l2.jpg" alt="Odyssey"><figcaption><h4>SWITZERLAND</h4></figcaption></figure>
-                    <figure class="col-md-4 effect-zoe"><img src="~/Skins/TekSpace/snow/images/l1.jpg" alt="Odyssey"><figcaption><h4>ITALY</h4></figcaption></figure>
-                    <figure class="col-md-4 effect-zoe"><img src="~/Skins/TekSpace/snow/images/l3.jpg" alt="Odyssey"><figcaption><h4>GERMANY</h4></figcaption></figure>
-                    <figure class="col-md-4 effect-zoe"><img src="~/Skins/TekSpace/snow/images/l4.jpg" alt="Odyssey"><figcaption><h4>FRANCE</h4></figcaption></figure>
-                    <figure class="col-md-4 effect-zoe"><img src="~/Skins/TekSpace/snow/images/l5.jpg" alt="Odyssey"><figcaption><h4>MONACO</h4></figcaption></figure>
-                    <figure class="col-md-4 effect-zoe"><img src="~/Skins/TekSpace/snow/images/l6.jpg" alt="Odyssey"><figcaption><h4>SPAIN</h4></figcaption></figure>
-                    <figure class="col-md-4 effect-zoe"><img src="~/Skins/TekSpace/snow/images/l7.jpg" alt="Odyssey"><figcaption><h4>NORWAY</h4></figcaption></figure>
-                    <figure class="col-md-4 effect-zoe"><img src="~/Skins/TekSpace/snow/images/l8.jpg" alt="Odyssey"><figcaption><h4>NETHERLANDS</h4></figcaption></figure>
-                    <figure class="col-md-4 effect-zoe"><img src="~/Skins/TekSpace/snow/images/l91.jpg" alt="Odyssey"><figcaption><h4>SWEDEN</h4></figcaption></figure>
-                </div>
-            </div>
-            <div class="content">
-                <div>
-                    <div class="dummy-img dummy-img-1"><img src="~/Skins/TekSpace/snow/images/l2.jpg" alt="Odyssey"></div>
-                    <p class="dummy-text aitsheadingw3">SWITZERLAND</p>
-                    <p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div>
-                    <div class="dummy-img dummy-img-2"><img src="~/Skins/TekSpace/snow/images/l1.jpg" alt="Odyssey"></div>
-                    <p class="dummy-text aitsheadingw3">ITALY</p>
-                    <p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div>
-                    <div class="dummy-img dummy-img-3"><img src="~/Skins/TekSpace/snow/images/l3.jpg" alt="Odyssey"></div>
-                    <p class="dummy-text aitsheadingw3">GERMANY</p>
-                    <p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div>
-                    <div class="dummy-img dummy-img-4"><img src="~/Skins/TekSpace/snow/images/l4.jpg" alt="Odyssey"></div>
-                    <p class="dummy-text aitsheadingw3">FRANCE</p>
-                    <p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div>
-                    <div class="dummy-img dummy-img-5"><img src="~/Skins/TekSpace/snow/images/l5.jpg" alt="Odyssey"></div>
-                    <p class="dummy-text aitsheadingw3">MONACO</p>
-                    <p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div>
-                    <div class="dummy-img dummy-img-6"><img src="~/Skins/TekSpace/snow/images/l6.jpg" alt="Odyssey"></div>
-                    <p class="dummy-text aitsheadingw3">SPAIN</p>
-                    <p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div>
-                    <div class="dummy-img dummy-img-7"><img src="~/Skins/TekSpace/snow/images/l7.jpg" alt="Odyssey"></div>
-                    <p class="dummy-text aitsheadingw3">NORWAY</p>
-                    <p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div>
-                    <div class="dummy-img dummy-img-8"><img src="~/Skins/TekSpace/snow/images/l8.jpg" alt="Odyssey"></div>
-                    <p class="dummy-text aitsheadingw3">NETHERLANDS</p>
-                    <p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div>
-                    <div class="dummy-img dummy-img-9"><img src="~/Skins/TekSpace/snow/images/l91.jpg" alt="Odyssey"></div>
-                    <p class="dummy-text aitsheadingw3">SWEDEN</p>
-                    <p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <span class="loading"></span>
-                <span class="icon close-content"><i class="fa fa-times" aria-hidden="true"></i></span>
-            </div>
-        </section>
-    </div>
-</div>
-<!-- //Locations -->
-<!-- Tradeshows -->
-<div class="w3portfolioaits" id="gallery">
-    <div class="w3-gallery-head">
-        <h3>Tradeshows</h3>
-    </div>
-
-    <div class="w3portfolioaits-items">
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-1">
-            <a class="example-image-link" href="images/gz1.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="images/g1.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-2">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz2.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="~/Skins/TekSpace/snow/images/g2.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-3">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz3.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="images/g3.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-4">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz4.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="~/Skins/TekSpace/snow/images/g4.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-5">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz5.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="~/Skins/TekSpace/snow/images/g5.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-6">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz6.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="images/g61.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-7">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz7.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="~/Skins/TekSpace/snow/images/g7.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-8">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz8.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="~/Skins/TekSpace/snow/images/g8.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-9">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz9.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="~/Skins/TekSpace/snow/images/g9.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-9">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz10.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="~/Skins/TekSpace/snow/images/g10.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-9">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz11.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="~/Skins/TekSpace/snow/images/g11.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-9">
-            <a class="example-image-link" href="~/Skins/TekSpace/snow/images/gz12.jpg" data-lightbox="example-set" data-title="">
-                <div class="grid">
-                    <figure class="effect-apollo">
-                        <img src="~/Skins/TekSpace/snow/images/g12.jpg" alt="Game Robo">
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-            </a>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-
-</div>
-<!-- //Portfolio -->
-<!--//NEWS-->
-<div class="w3-agile-news" id="news">
-    <div class="w3-agile-news-grids">
-        <div class="col-md-6 w3-news-grid1-left">
-            <h3>latest</h3>
-            <h3>News</h3>
-        </div>
-        <div class="col-md-6 w3-news-grid1-right">
-            <p>Fusce convallis, ante non sodales dapibus, risus mauris viverra nibh, vel lacinia erat nulla at est. Vestibulum vestibulum risus ac eros luctus, at dapibus libero gravida. Cras euismod, felis non egestas gravida, nisi purus placerat lacus, sed pulvinar ipsum turpis sed risus. </p>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="w3l-news-bottom">
-        <div class="col-md-7 w3l-news-bottom-left">
-            <div class="w3l-news-bottom-left-info">
-                <h6><a href="#" data-toggle="modal" data-target="#myModal1">26 march 2017</a></h6>
-                <h3><a href="#" data-toggle="modal" data-target="#myModal1">Our joyfull trip</a></h3>
-                <p>Vestibulum vestibulum risus ac eros luctus, at dapibus libero gravida. Cras euismod, felis non egestas gravida, nisi purus placerat lacus, sed pulvinar ipsum turpis sed risus.</p>
-                <h5><a href="#" data-toggle="modal" data-target="#myModal1">Readmore</a></h5>
-            </div>
-        </div>
-        <div class="col-md-5 w3l-news-bottom-right">
-            <img src="~/Skins/TekSpace/snow/images/news-3.jpg" alt="" />
-            <h6><a href="#" data-toggle="modal" data-target="#myModal2">26 march 2017</a></h6>
-            <h3><a href="#" data-toggle="modal" data-target="#myModal2">Our joyfull trip</a></h3>
-            <p>Vestibulum vestibulum risus ac eros luctus, at dapibus libero gravida. Cras euismod, felis non egestas gravida, nisi purus placerat lacus, sed pulvinar ipsum turpis sed risus.</p>
-            <h5><a href="#" data-toggle="modal" data-target="#myModal2">Readmore</a></h5>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-</div>
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-    <!-- Modal1 -->
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4>Snow tour</h4>
-                <img src="~/Skins/TekSpace/snow/images/m1.jpg" alt=" " class="img-responsive">
-                <h5>Lorem Ipsum</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //Modal2-->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-    <!-- Modal1 -->
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4>Snow tour</h4>
-                <img src="~/Skins/TekSpace/snow/images/m2.jpg" alt=" " class="img-responsive">
-                <h5>Lorem Ipsum</h5>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //Modal3-->
-<!--/contact-->
-<!--contact-->
-<div class="contact-w3layouts" id="contact">
-    <div class="container">
-        <div class="col-md-6 contact-agileits-w3layouts-left">
-            <h3 class="title-w3-agile-sub">Contact Us</h3>
-            <p class="para-agileits-w3layouts">Malesuada penatibus felis Neque porro quisquam est qui dolorem Lorem ipsum dolor sit amet, aptent neque fringilla duis erast ridiculus.</p>
-            <p class="sub">California St San Francisco, CA USA<span class="glyphicon glyphicon-map-marker icon" aria-hidden="true"></span></p>
-            <p class="sub">Mon-Fri : 9am - 10pm.  Sat : 9am - 12pm<span class="glyphicon glyphicon-time icon" aria-hidden="true"></span></p>
-            <p class="add"><span>Tel :</span> +0 (020) 123-5338<span class="glyphicon glyphicon glyphicon-earphone icon" aria-hidden="true"></span></p>
-            <p class="add"><span>Email :</span> <a class="mail" href="mailto:mail@example.com">info(at)example.com</a><span class="glyphicon glyphicon-envelope icon" aria-hidden="true"></span></p>
-            <div class="mail-grid1-form ">
-                <h3 class="title-w3-agile-sub">Send a Message</h3>
-                <form action="#" method="post">
-                    <input type="text" name="Name" placeholder="Name" required="" />
-                    <input type="email" name="Email" placeholder="Email" required="" />
-                    <textarea name="Message" placeholder="Type Your Text Here...." required=""></textarea>
-                    <input type="submit" value="Submit" />
-                </form>
-            </div>
-        </div>
-        <div class="col-md-6 w-agile-map">
-            <div class="agileits-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387142.8400948023!2d-74.25819082602831!3d40.70583163923578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1470295981376" allowfullscreen></iframe>
-            </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!--//contact-->
-<!--//contact-->
-<!-- subscribe -->
-<div class="agileits_w3layouts_subscribe_info">
-    <div class="container">
-        <div class=" subscribe-grids">
-            <div class="col-md-4 subscribe-head">
-                <h3>Subscribe now</h3>
-                <p>be the first who knows</p>
-            </div>
-            <div class="col-md-8 subscribe-form">
-                <form action="#" method="post">
-                    <input type="email" name="email" placeholder="Enter your Email..." required="">
-                    <input type="submit" value="Subscribe">
-                </form>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-<!-- //subscribe -->
-<div class="w3-footer">
-    <div class="W3-footer-grids">
-        <div class="col-md-6 footer-left-icons">
-            <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-
-        </div>
-        <div class="col-md-6 footer-right">
-            <ul>
-                <li><a href="#news" class="scroll" data-hover="News">News</a></li>
-                <li><a href="#price" class="scroll" data-hover="Price List">Price List</a></li>
-                <li><a href="#contact" class="scroll" data-hover="Contact">Contact</a></li>
-            </ul>
-
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!-- copyright -->
-<div class="copyright-agile">
-    <p>&copy; 2017 Snow tour. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-</div>
-<!-- //copyright -->
-</div>
-        <!-- js -->
-        <script type="text/javascript" src="~/Skins/TekSpace/snow/js/jquery-2.1.4.min.js"></script>
-        <script src="~/Skins/TekSpace/snow/js/responsiveslides.min.js"></script>
-        <script>
-				$(function () {
-					$("#slider").responsiveSlides({
-						auto: true,
-						pager: true,
-						nav: true,
-						speed: 1000,
-						namespace: "callbacks",
-						before: function () {
-							$('.events').append("<li>before event fired.</li>");
-						},
-						after: function () {
-							$('.events').append("<li>after event fired.</li>");
-						}
-					});
-				});
-        </script>
-
-        <!-- Calendar -->
-        <link rel="stylesheet" href="~/Skins/TekSpace/snow/css/jquery-ui.css" />
-        <script src="~/Skins/TekSpace/snow/js/jquery-ui.js"></script>
-        <script>
-					  $(function() {
-						$( "#datepicker,#datepicker1" ).datepicker();
-					  });
-        </script>
-        <!-- //Calendar -->
-        <!-- Portfolio-Popup-Box-JavaScript -->
-        <script src="~/Skins/TekSpace/snow/js/jquery.chocolat.js"></script>
-        <script type="text/javascript">
-				$(function() {
-					$('.w3portfolioaits-item a').Chocolat();
-				});
-        </script>
-        <!-- //Portfolio-Popup-Box-JavaScript -->
-        <!-- Tour-Locations-JavaScript -->
-        <script src="~/Skins/TekSpace/snow/js/classie.js"></script>
-        <script src="~/Skins/TekSpace/snow/js/helper.js"></script>
-        <script src="~/Skins/TekSpace/snow/js/grid3d.js"></script>
-        <script>
-				new grid3D( document.getElementById( 'grid3d' ) );
-        </script>
-        <!-- //Tour-Locations-JavaScript -->
-        <script src="~/Skins/TekSpace/snow/js/SmoothScroll.min.js"></script>
-        <!-- smooth scrolling-bottom-to-top -->
-        <script type="text/javascript">
-					$(document).ready(function() {
-					/*
-						var defaults = {
-						containerID: 'toTop', // fading element id
-						containerHoverID: 'toTopHover', // fading element hover id
-						scrollSpeed: 1200,
-						easingType: 'linear'
-						};
-					*/
-					$().UItoTop({ easingType: 'easeOutQuart' });
-					});
-        </script>
-        <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-        <!-- //smooth scrolling-bottom-to-top -->
-        <script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-        </script>
-        <!-- start-smoth-scrolling -->
-        <script type="text/javascript" src="~/Skins/TekSpace/snow/js/move-top.js"></script>
-        <script type="text/javascript" src="~/Skins/TekSpace/snow/js/easing.js"></script>
-        <script type="text/javascript" src="~/Skins/TekSpace/snow/js/bootstrap-3.1.1.min.js"></script>
-
+	<!-- Minicart and miniwish resources (javascript and overlay html) -->
+	@Html.Action(ActionNames.MinicartResources, ControllerNames.Minicart)
+	
+	@Html.Partial("_BodyClose")
 </body>
 </html>

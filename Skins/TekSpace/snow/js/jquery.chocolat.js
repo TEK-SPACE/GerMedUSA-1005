@@ -43,19 +43,21 @@
 			if(index == 0 && settings.linkImages && settings.setTitle == ''){
 				settings.setTitle = isSet($(this).attr('rel'), ' ');
 			}
-			$(this).each(function() {
-				images[settings.setIndex]['displayAsALink'] = settings.displayAsALink;
-				images[settings.setIndex][index]            = [];
-				images[settings.setIndex][index]['adress']  = isSet($(this).attr('href'), ' ');
-				images[settings.setIndex][index]['caption'] = isSet($(this).attr('title'), ' ');
-				if(!settings.displayAsALink){
-					$(this).unbind('click').bind('click', {
-						id  : settings.setIndex,
-						nom : settings.setTitle,
-						i   : index
-					}, _initialise);
-				}
-			})
+		    $(this).each(function() {
+		        images[settings.setIndex]['displayAsALink'] = settings.displayAsALink;
+		        images[settings.setIndex][index] = [];
+		        images[settings.setIndex][index]['adress'] = isSet($(this).attr('href'), ' ');
+		        images[settings.setIndex][index]['caption'] = isSet($(this).attr('title'), ' ');
+		        if (!settings.displayAsALink) {
+		            $(this).unbind('click').bind('click',
+		                {
+		                    id: settings.setIndex,
+		                    nom: settings.setTitle,
+		                    i: index
+		                },
+		                //_initialise);
+		        }
+		    });
 		});
 		
 		//setIndex:
@@ -75,7 +77,7 @@
 			}
 		}
 		
-		function _initialise(event) {
+        function _initialise(event) {
 			
 			settings.currentImage = event.data.i;
 			settings.setIndex     = event.data.id;
@@ -87,7 +89,12 @@
 		function _interface(){
 			//html
 			clear();
-			settings.container.append('<div id="Choco_overlay"></div><div id="Choco_content"><div id="Choco_close"></div><div id="Choco_loading"></div><div id="Choco_container_photo"><img id="Choco_bigImage" src="" /></div><div id="Choco_container_description"><span id="Choco_container_title"></span><span id="Choco_container_via"></span></div><div id="Choco_left_arrow" class="Choco_arrows"></div><div id="Choco_right_arrow" class="Choco_arrows"></div></div>');	
+			settings.container.append('<div id="Choco_overlay"></div><div id="Choco_content"><div id="Choco_close"></div><div id="Choco_loading"></div><div id="Choco_container_photo">' +
+                '<img id="Choco_bigImage" src="" />' +
+          //      +'<object data="http://www.germedusa.com/download_pdf/gynecology_catalog.pdf" type="application/x-pdf">'+
+          //      +'<a href= "http://www.germedusa.com/download_pdf/gynecology_catalog.pdf"> shree</a>'+
+		        //+'</object>'+
+			    '</div><div id="Choco_container_description"><span id="Choco_container_title"></span><span id="Choco_container_via"></span></div><div id="Choco_left_arrow" class="Choco_arrows"></div><div id="Choco_right_arrow" class="Choco_arrows"></div></div>');	
 			$('#Choco_left_arrow').css('background-image', 'url('+settings.leftImg+')');  
 			$('#Choco_right_arrow').css('background-image', 'url('+settings.rightImg+')');  
 			$('#Choco_close').css('background-image', 'url('+settings.closeImg+')'); 

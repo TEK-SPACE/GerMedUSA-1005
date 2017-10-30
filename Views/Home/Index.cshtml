@@ -1,4 +1,6 @@
 ﻿@model HomeViewModel
-
+@{
+    Layout = ViewEngines.Engines.FindViewPath(ViewContext.Controller.ControllerContext, "_HomeLayout");
+}
 @Html.Raw(Model.PayPalAd)
 @Html.XmlPackage("page.default.xml.config")

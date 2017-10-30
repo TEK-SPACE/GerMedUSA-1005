@@ -553,7 +553,7 @@ nav#cl-effect-15 ul li {
 }
 /*--//BANNER-BOTTOM--*/
 .main {
-  position: absolute;
+  /*position: absolute;*/
         top: 44em;
      width: 100%;
     z-index: 999;
