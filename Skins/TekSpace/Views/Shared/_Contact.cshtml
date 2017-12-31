@@ -20,11 +20,13 @@
             </p>
             <div class="mail-grid1-form ">
                 <h3 class="title-w3-agile-sub">Send a Message</h3>
-                <form action="#" method="post">
-                    <input type="text" name="Name" placeholder="Name" required="" />
-                    <input type="email" name="Email" placeholder="Email" required="" />
-                    <textarea name="Message" placeholder="Type Your Text Here...." required=""></textarea>
-                    <input type="submit" value="Submit" />
+                <form id="MailArea" method="POST" action="sendform.aspx">
+                    <input id="MailName" type="text" name="Name" placeholder="Name" required="" />
+                    <input id="MailEmail" type="email" name="Email" placeholder="Email" required="" />
+                    <textarea id="MailMessage" name="Message" placeholder="Type Your Text Here...." required=""></textarea>
+                    <div class="g-recaptcha" data-sitekey="6LdsAwgTAAAAAMIa31frpv1HZJQZqHW_gZpwy9eZ"></div>
+                    <input type="submit" value="Submit" onclick="return false;" />
+                    @*<input type="submit" value="Submit" onclick="return CheckFields();" />*@
                 </form>
             </div>
         </div>

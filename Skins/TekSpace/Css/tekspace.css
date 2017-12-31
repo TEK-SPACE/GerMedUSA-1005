@@ -30,7 +30,7 @@ i.fa.fa-bullseye {
 .col-sm-3.col-xs-6.product-grid-item {
     min-height: 292px;
 }
-.form-group.add-to-cart-group {
+.featuredCartWrap .form-group.add-to-cart-group {
     position: absolute;
     top: 265px;
 }
@@ -50,4 +50,50 @@ p {
 
 .about-right-grid h5 {
     text-align: JUSTIFY;
+}
+header, .full-width {
+    width: 100%;
+    background: #ccc;
+}
+.wrap {
+    width: 80%;
+    max-width: 24em;
+    margin: 0 auto;
+    padding: 0.25em 0.625em;
+}
+.full-width-bar {
+    /* also subtract section padding (1.5rem) */
+    margin: 0 -601.5rem;
+    /* add back section padding (1.5rem) */
+    padding: 0.25rem 1.5rem;
+    background: red;
+    /* border has to be solid, not RGBa */
+    /* 9600px or equiv (600rem = 9600/16) */
+    border-left: 600rem solid maroon;
+    border-right: 600rem solid maroon;
+    color: #fff !important;
+}
+
+.full-width-bar-green {
+    /* also subtract section padding (1.5rem) */
+    margin: 0 -601.5rem;
+    /* add back section padding (1.5rem) */
+    padding: 0.25rem 1.5rem;
+    background: green;
+    /* border has to be solid, not RGBa */
+    /* 9600px or equiv (600rem = 9600/16) */
+    border-left: 600rem solid darkgreen;
+    border-right: 600rem solid darkgreen;
+    color: #fff;
+}
+.row.featured-item-row {
+    margin-top: 1.5em;
+}
+p.sub,p.add {
+    text-align: right;
+}
+p.para-agileits-w3layouts {
+    text-align: right;
+}
+.slider-img1 {
 }

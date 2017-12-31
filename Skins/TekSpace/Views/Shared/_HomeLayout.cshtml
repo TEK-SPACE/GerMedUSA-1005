@@ -72,49 +72,23 @@
     <!--//Slider-->
 </div>
 <div class="main" id="main">
-<!--//Header-->
-    
-<!--/about-->
-<div class="w3-aglie-about" id="about">
-    <div class="container">
-        <div class="w3-agile-about-grids">
-            <div class="col-md-6 about-left-grid">
-                <h4>OUR STORY</h4>
-                <h3>ABOUT <span>GERMEDUSA</span>
-                </h3>
-                <h5><span><i class="fa fa-check" aria-hidden="true"></i></span>Welcome </h5>
-                <p> I would like to welcome you to GermedUSA Inc. Our years of experience and industry inside know how, is the key to our quality and affordable instruments, which speak for themselves. For decades GerMedUSA persist to be known to deliver high quality products and services to achieve total customer satisfaction. </p>
-                <h5><span><i class="fa fa-check" aria-hidden="true"></i></span>Identity</h5>
-                <p>GerMedUSA understands the importance of details when crafting Medical Surgical Instruments and Equipment, therefore our craftsmen are committed to providing life saving products that are safe and effective in the Surgical Instrument industry.</p>
-                @*<h5><span><i class="fa fa-check" aria-hidden="true"></i></span>Instruments</h5>
-                <p>
-                    GerMedUSA has a variety of instrumentation selections for all surgical specialties, Cardiovascular, Gynecological, Micro-Surgical, Neurosurgical, No Scalpel Vasectomy, Plastic Surgery, E.N.T or Dermal Surgical Instruments. GerMedUSA offers a broad range Medical Equipment ,Veterinary Surgical Instruments, for Small and Large Animals such as Emasculators Castrators, Equine Surgical Instruments, Hoof care Instruments, No Scalpel Vasectomy Instruments. GerMedUSA as a wide variety of Left Handed Instruments Surgical and Veterinary. GerMedUSA also carries instruments of Rainbow Color Titanium Coated , and Surgical Instruments, Tungsten Carbide Insert Jaws with Gold Rings Needle Holders and Scissors, Supercuts, Razor, Sharp Scissors with Black Handle, Dental Surgical Instruments, IUD Mini Lap Kits, Student Dissecting Kits, Single Use Sterile Economy Surgical Instruments, Fiber Optic Laryngoscopes, Diagnostic Sets, Otto scope, Ophthalmoscope Sets, Laparoscopy, Arthroscopy, Thoracoscopy and MIS Instruments. 
-                </p>*@
-                <h6><a href="/c-39-operating-room-surgical-instruments.aspx">view Products</a></h6>
-            </div>
-            <div class="col-md-6 about-right-grid">
-                <h4>OUR STORY</h4>
-                <h3>Why<span>CHOOSE</span>US
-                </h3>
-                <h5>You can always count on GerMedUSA, Inc to manufacture your instruments or tool for any surgical procedure you desire. You may send us your own design drawing for any surgical instrument and we will help you manufacturing. All of GerMedUSA Surgical instruments Veterinary or Dental Instruments are LIFETIME WARRANTEE. We look forward to providing you with great service as well as informing you of our wonderful offers. To find out more or to place an order, please feel free to contact our Customer Service Department.please feel free to contact our Customer Service Department. please feel free to contact our Customer Service Department. please feel free to contact our Customer Service Department.</h5>
-                <h6><a href="/t-about.aspx">know more</a></h6>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
+    <!--//Header-->
+    <!-- Categories -->
+    @Html.Partial("_Categories")
+    <!--/about-->
+    @*@Html.Partial("_About")*@
 <!--//about-->
     
-<div class="container">
-    <!-- Contents start -->
-    @RenderBody()
-    <!-- Contents end -->
-</div>
+    <div class="container">
+        <!-- Contents start -->
+        @RenderBody()
+        <!-- Contents end -->
+    </div>
+
 <!--/services-->
     @Html.Partial("_Services")
 <!--//services-->
-<!-- Categories -->
-@Html.Partial("_Categories")
+
 <!-- //Locations -->
 <!-- Downloads -->
 @Html.Partial("_Downloads")

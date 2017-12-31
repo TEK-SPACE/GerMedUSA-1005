@@ -2543,7 +2543,8 @@ div#bs-example-navbar-collapse-1 {
 	}
 	.slider-img1 {
     min-height: 500px;
-    background: url(../images/banner1433.jpg)no-repeat -225px 0px;
+    /*background: url(../images/banner1433.jpg)no-repeat -225px 0px;*/
+	    background: url(../images/banner1433.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

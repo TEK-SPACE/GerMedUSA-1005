@@ -1,4 +1,4 @@
 {
-  "Payload": "{\r\n  \"IsValid\": true,\r\n  \"Domain\": \"aspdotnetstorefront.germedusa.com\",\r\n  \"Message\": \"aspdotnetstorefront.germedusa.com is a valid licensed domain.\",\r\n  \"ValidUntil\": \"2017-11-02T04:23:44.4960682-07:00\",\r\n  \"Timestamp\": \"2017-10-30T04:23:44.4960682-07:00\"\r\n}",
-  "Signature": "B7yfKUsi8na1366QMqeuX1G7xv6langvipzDI5ipQZSQxJwutEPNj+GbWE/+wyzxHafSHnO6uqw7U66qM2hcCZ9sxyG7GpTM8x4CfwIhPorf+osxD/yH4XCRF7xuzpO+bgop0Fqgihsp7x1uApc+RKXuvVwnpHE0fyGgJydqnBc="
+  "Payload": "{\r\n  \"IsValid\": true,\r\n  \"Domain\": \"aspdotnetstorefront.germedusa.com\",\r\n  \"Message\": \"aspdotnetstorefront.germedusa.com is a valid licensed domain.\",\r\n  \"ValidUntil\": \"2018-01-03T00:04:38.8816583-08:00\",\r\n  \"Timestamp\": \"2017-12-31T00:04:38.8816583-08:00\"\r\n}",
+  "Signature": "FeVnowbDreXANukD6xd9uh4Libk23B2l5N9oEsqKa2pSI8DmdykNZz1l+hORzU8LeLqOC6a7AS6ZF2BesPNLl4q+uB7RNc6GD3hw4r3DnoyhwQKzOmAxzB9lOpQjF0SD5quxPOe650cFlCgkkkBOi8CKv+NQ6Wywphk/hWN2WBY="
 }

@@ -2829,6 +2829,7 @@
     <Content Include="Skins\TekSpace\Views\Shared\_Subscribe.cshtml" />
     <Content Include="Skins\TekSpace\Views\Shared\_Downloads.cshtml" />
     <Content Include="Skins\TekSpace\Views\Shared\_Categories.cshtml" />
+    <Content Include="Skins\TekSpace\Views\Shared\_About.cshtml" />
     <None Include="XmlPackages\xmlpackage.xsd">
       <SubType>Designer</SubType>
     </None>
