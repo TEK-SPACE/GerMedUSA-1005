@@ -1,31 +1,69 @@
-﻿@model ProductViewModel
+﻿@using System.Diagnostics
+@using System.Text.RegularExpressions
+@model ProductViewModel
 
 @{
-	//override default meta tags
-	ViewBag.MetaTitle = Model.MetaTitle;
-	ViewBag.MetaDescription = Model.MetaDescription;
-	ViewBag.MetaKeywords = Model.MetaKeywords;
-	ViewBag.PageTitle = Model.PageTitle;
+    //override default meta tags
+    ViewBag.MetaTitle = Model.MetaTitle;
+    ViewBag.MetaDescription = Model.MetaDescription;
+    ViewBag.MetaKeywords = Model.MetaKeywords;
+    ViewBag.PageTitle = Model.PageTitle;
 }
 
-@if(Model.LoginRequired)
-{
-	<p class="registration-required">@Html.StringResource("showproduct.aspx.1")
+@{
+    var redirectUrl = "";
+    Debug.Assert(Request.Url != null, "Request.Url != null");
+    //if (Request.Url.PathAndQuery.StartsWith("/p-3"))
+    //{
+    //    Response.Redirect("http://www.gervetusa.com/");
+    //}
+    string pat = @"p-(\d{1,}).aspx";
+    Regex r = new Regex(pat, RegexOptions.IgnoreCase);
+    Match m = r.Match(Request.Url.ToString().Split('?')[0]);
+    if (m.Success)
+    {
+       
+        //var url = Request.Url.ToString().Split('?')[0];
+        //throw new Exception(string.Format("SELECT TOP (1) * FROM dbo.Redirects AS R WHERE R.SourceUrl = '{0}' ORDER BY R.SourceUrl ASC", url));
+        using (var dbconn = DB.dbConn())
+        {
+            dbconn.Open();
+            using (var rs = DB.GetRS(string.Format("SELECT TOP (1) * FROM dbo.Redirects AS R WHERE R.SourceUrl like '{0}%' ORDER BY R.SourceUrl ASC", m.Groups[0].Captures[0].Value.Replace(".aspx","")), dbconn))
+            {
+                while (rs.Read())
+                {
+                    redirectUrl = DB.RSField(rs, "RedirectUrl");
+                }
+            }
+        }
+    }
+    
+    if (!string.IsNullOrWhiteSpace(redirectUrl) && redirectUrl.Length > 0)
+    {
+        //throw new Exception(redirectUrl);
+        Response.Redirect(redirectUrl.Trim(),true);
+    }
+}
 
-		<a href="@Url.Action(
+@if (Model.LoginRequired)
+{
+    <p class="registration-required">
+        @Html.StringResource("showproduct.aspx.1")
+
+        <a href="@Url.Action(
 			actionName: ActionNames.SignIn,
 			controllerName: ControllerNames.Account,
 			routeValues: new RouteValueDictionary{
 				{ RouteDataKeys.ReturnUrl, @Request.Url.PathAndQuery } })">
 
-			@Html.StringResource("showproduct.aspx.2")
-		</a>
-		@Html.StringResource("showproduct.aspx.3")
-	</p>
+            @Html.StringResource("showproduct.aspx.2")
+        </a>
+        @Html.StringResource("showproduct.aspx.3")
+    </p>
 }
 else
 {
-	<!--Xmlpackage '@Model.XmlPackageName' -->
-	@Html.Raw(Model.PageContent)
-	<!--End of Xmlpackage '@Model.XmlPackageName' -->
+    <!--Xmlpackage '@Model.XmlPackageName' -->
+    @Html.Raw(Model.PageContent)
+    <!--End of Xmlpackage '@Model.XmlPackageName' -->
 }
