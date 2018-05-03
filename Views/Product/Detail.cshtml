@@ -28,7 +28,7 @@
         using (var dbconn = DB.dbConn())
         {
             dbconn.Open();
-            using (var rs = DB.GetRS(string.Format("SELECT TOP (1) * FROM dbo.Redirects AS R WHERE R.SourceUrl like '{0}%' ORDER BY R.SourceUrl ASC", m.Groups[0].Captures[0].Value.Replace(".aspx","")), dbconn))
+            using (var rs = DB.GetRS(string.Format("SELECT TOP (1) * FROM dbo.Redirects AS R WHERE R.SourceUrl like '{0}%' ORDER BY R.SourceUrl ASC", m.Groups[0].Captures[0].Value.Replace(".aspx","-")), dbconn))
             {
                 while (rs.Read())
                 {

@@ -1,0 +1,614 @@
+/*==============================================================
+Template Name: Your Template Name
+Template URI: 
+Description: 
+Author URI: 
+version: 
+===============================================================*/
+
+
+/* =========================================
+CSS Index
+
+* Base CSS
+* Header CSS
+    -Main Menu CSS
+    -Social link CSS
+*   -Sticky Header and Menu CSS
+* Home Slider CSS                      
+* Section title CSS
+* Features CSS
+* Service CSS
+* Portfolio CSS
+* Skill CSS
+    -Progress Bar CSS
+* Project count CSS
+* Testimonial CSS
+* Call to action CSS
+* Owl-carousel customized CSS
+* Pricing CSS
+* Blog CSS
+* Contact CSS
+* Footer CSS
+* Footer cpyright CSS
+* Preloader CSS
+===========================================*/
+/*==========================================
+Base CSS
+===========================================*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+a:focus {
+    outline: 0 solid
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.fix {
+    overflow: hidden
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #0a0a0a;
+    font-size: 15px;
+}
+
+a {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    color: #bfbfbf;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+
+
+/*==========================================
+Header CSS
+===========================================*/
+header.header {
+    padding: 15px 0px;
+}
+
+.search_bar input[type="text"] {
+    border: 1px solid #dedede;
+    color:  #dedede;
+    padding: 13px;
+    border-radius: 5px;
+    width:  70%;
+    font-size:  15px;
+	 float: right;
+}
+
+.right_header {
+    float: right;
+}
+.right_header form{
+    overflow: hidden;
+}
+.left_header h4 {
+    /*font-size:  18px;
+    padding-top: 15px;
+    display:  block;*/
+    font-size: 18px;
+    padding-top: 15px;
+    padding-left: 20px;
+    display: block;
+    font-weight: normal;
+}
+
+.mainmenu ul {
+    margin:  0;
+    padding:  0;
+    list-style: none;
+}
+
+.mainmenu ul li {
+    float:  left;
+    margin-left:  25px;
+}
+
+.mainmenu ul li a {
+    color:  #3c2955;
+    font-size:  16px;
+    font-weight:  700;
+}
+
+.mainmenu {
+    margin-top: 15px;
+}
+
+/*==========================================
+Hero section CSS
+===========================================*/
+.hero-section{margin:0 auto;text-align:center;}
+
+
+/*==========================================
+Social link CSS
+===========================================*/
+
+
+
+/*==========================================
+Sticky Header and Menu CSS
+===========================================*/
+
+
+
+/*==========================================
+Home Slider CSS
+===========================================*/
+
+
+
+/*==========================================
+Section title CSS
+===========================================*/
+
+
+
+/*==========================================
+Features CSS
+===========================================*/
+h2#section-title {
+    font-size:  30px;
+    text-transform:  uppercase;
+    font-weight:  500;
+    margin: 50px 0;
+    display:  block;
+}
+.single_feature {
+    border: 2px solid #e7e7e7;
+    margin-bottom: 30px;
+}
+
+.single_feature h2 {
+    padding: 50px 0px;
+    border-top: 2px solid #e7e7e7;
+    color:  #282828;
+    font-size:  18px;
+    margin-bottom:  0px;
+    padding-left:  15px;
+}
+
+.search_bar input[type="submit"] {
+    position:  absolute;
+    background:  none;
+    top: 7px;
+    right: 20px;
+    background-image: url(img/ic_search.png);
+    width: 38px;
+    height:  34px;
+    border: none;
+    background-repeat:  no-repeat;
+}
+
+/*==========================================
+Service CSS
+===========================================*/
+section.mission_area {background-image:  url(img/bg3.png);padding: 85px 0px;}
+
+.single_mission {
+    background:  #fff;
+    border-bottom: 5px solid #eaeaea;
+    margin-bottom:  30px;
+    padding: 20px 20px 50px 20px;
+}
+
+.single_mission h2 {
+    font-size:  18px;
+    margin-bottom:  10px;
+    color:  #333333;
+}
+
+.single_mission p {
+    color: #151414;
+    font-size:  16px;
+    font-weight:  300;
+}
+
+.mission_right h2 {
+    font-size: 35px;
+    color:  #fff;
+    font-weight: 300;
+}
+
+.mission_right p {
+    font-size:  16px;
+    font-weight:  300;
+}
+
+
+/*==========================================
+Portfolio CSS
+===========================================*/
+section.latest_news_area {
+    background-image: url(img/bg-latest-news.png);
+    padding:  50px 0px;
+}
+
+h2#section_titile2 {
+    color:  #fff;
+    font-size:  45px;
+    text-align:  center;
+}
+
+.owl-item {
+}
+
+.item {
+    color: #fff;
+}
+
+.news_date {
+    background-image:  url(img/bg-date.png);
+    background-size:  100%;
+    background-repeat:  no-repeat;
+    text-align:  center;
+    padding-top: 51px;
+    height: 285px;
+    margin-top: 35px;
+}
+
+.news_date h2 {
+    color:  #362d41;
+    font-size: 60px;
+    font-family:  'Open Sans';
+    margin-bottom: 6px;
+}
+
+.news_date h5 {
+    color: #362d41;
+    font-size:  18px;
+}
+.news_content em {
+    display:  block;
+    font-size:  18px;
+}
+
+.news_content strong {
+    font-size:  24px;
+    display:  block;
+    color:  #15c2fd;
+    font-weight: 800;
+}
+
+.news_content span {
+    font-size:  16px;
+    font-weight:  300;
+    color:  #fefefe;
+}
+
+.news_content h3 {
+    margin: 15px 0px;
+    font-size:  36px;
+}
+
+.news_content p {
+    font-size:  16px;
+    color:  #fefefe;
+}
+
+.news_content a {
+    background:  #ffff;
+    display: block;
+    width: 225px;
+    padding: 8px;
+    text-align:  center;
+    color:  #342b40;
+    font-size:  24px;
+    border-radius: 10px;
+    margin-top:  40px;
+}
+
+/*==========================================
+Skill CSS
+===========================================*/
+.zigzag {
+    background-image:  url(img/zigzag.png);
+    width:  100%;
+    height:  14px;
+    background-repeat-y: no-repeat;
+    background-repeat-x:  repeat;
+    background-size:  100%;
+    margin-top: -4px;
+}
+
+
+/*==========================================
+Progress Bar CSS
+===========================================*/
+section.contact_area {
+    padding: 40px 0px;
+}
+section.contact_area input,textarea {
+    width:  100%;
+    margin-top: 15px;
+    padding: 20px 10px;
+    background-image:  url(img/user.png);
+    background-repeat:  no-repeat;
+    background-size:  30px;
+    background-position: 20px 15px;
+    border: 1px solid #c5c5c5;
+    padding-left: 60px;
+}
+section.contact_area input#email{
+	    background-image:  url(img/email.png);
+	
+}
+section.contact_area input[type="submit"] {
+    width: 160px;
+    background:  #1b8ee8;
+    padding: 20px;
+    float:  right;
+    color:  #fff;
+    text-transform:  uppercase;
+    font-weight:  700;
+    letter-spacing: 5px;
+    border: navajowhite;
+    font-size: 18px;
+    font-family: 'Open Sans';
+}
+
+section.contact_area textarea {
+    height: 220px;
+	background-image:  url(img/pen.png);
+}
+
+.contact_details span img {
+    float:  left;
+    margin-right: 20px;
+    margin-bottom:  10px;
+}
+
+.contact_details span {
+    width:  100%;
+    display:  block;
+    overflow:  hidden;
+    margin-bottom:  18px;
+    font-size:  15px;
+}
+
+.contact_details h2 {
+    font-size: 30px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+.contact_details ul {
+    padding:  0;
+    list-style: none;
+    margin-top:  40px;
+}
+
+.contact_details ul li {
+    float:  left;
+    margin-right: 15px;
+}
+
+form {
+    overflow: hidden;
+}
+/*==========================================
+Project count CSS
+===========================================*/
+section.copyright_area {background:  #413747;color:  #fff;padding: 25px 0px;}
+
+section.copyright_area p {
+    margin: 0;
+}
+
+
+
+/* Tab section */
+.heading4{
+	    font-size: 31px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    color: #111111;
+    margin: 0px 0px 15px 0px;
+}
+.heading1{font-size:30px;line-height:20px;font-family:'Lato', sans-serif;text-transform:uppercase;color:#1b2834;font-weight:900;}
+.content-quality{float:left;width:193px;}
+.content-quality p{margin-left:10px;font-family:'Open Sans', sans-serif;font-size:14px;font-weight:600;line-height:17px;}
+.content-quality p span{display:block;}
+.tabtop li a{    font-family: 'Lato', sans-serif;
+    /*font-weight: 700;*/
+    color: #1b2834;
+    border-radius: 0px;
+    margin-right: 0;
+    border: 1px solid #ebebeb !important;
+}
+
+/* .tabtop .active a:before{content:"♦";position:absolute;top:15px;left:82px;color:#e31837;font-size:30px;} */
+
+.tabtop li a:hover{color:#000 !important;text-decoration:none;}
+.tabtop .active a:hover{color:#000 !important;}
+.tabtop .active a{color:#000 !important;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f3ff+0,ddd4f4+100 */
+background: #f2f3ff; /* Old browsers */
+background: -moz-linear-gradient(top, #f2f3ff 0%, #ddd4f4 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #f2f3ff 0%,#ddd4f4 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #f2f3ff 0%,#ddd4f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f3ff', endColorstr='#ddd4f4',GradientType=0 ); /* IE6-9 */
+}
+.tab-content {
+    overflow: hidden;
+    margin-bottom: 82px;
+}
+.margin-tops{margin-top:30px;}
+.tabtop li a:last-child{padding:10px 17px;}
+.thbada{padding:10px 28px !important;}
+section p{font-family:'Lato', sans-serif;}
+.margin-tops4{margin-top:20px;}
+.tabsetting{padding-top:6px;}
+.services{background-color:#d4d4d4;min-height:710px;padding:65px 0 27px 0;}
+.services a:hover{
+	
+	color:#000;
+
+
+}
+.services h1{margin-top:0px !important;}
+.heading-container p{font-family:'Lato', sans-serif;text-align:center;font-size:16px !important;text-transform:uppercase;}
+
+.nav-tabs {
+    border-bottom: 0px solid #ddd;
+}
+
+ul.tabsetting>li>a>img {
+    max-width: none;
+    width: 20px;
+    margin-right: 5px;
+}
+img.ic_vid {
+    height: 18px;
+}
+
+/* Tab-slider */
+.single-tab-slider {
+    padding-right: 50px;
+}
+.slider-tab-img{}
+
+
+/* Owl carousel Nav Style */
+.owl-tab .owl-nav div {
+    width: 30px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+    line-height: 28px;
+    font-size: 18px;
+    border-radius: 50%;
+    opacity: 0.6;
+    position: absolute;
+    right: 90px;
+    top: 0;
+    /* margin-top: -57px; */
+}
+
+.owl-tab .owl-nav div.owl-next{
+    left: auto;
+    right: 50px;
+}
+
+
+
+
+/* Masonary */
+.hero-section{display:block;}
+.hero-section-mas{display:none;}
+ul#accordion{margin:0;padding:0;}
+.masonry {
+      -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+}
+
+.item {
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+.masonry {
+    margin: 1.5em 0;
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+}
+
+.item {
+    display: inline-block;
+    background: transparent;
+    /* padding: 1em; */
+    /* margin: 1em 0 1em; */
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* box-shadow: 0px 0px 4px 0 #999; */
+}
+.item img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1400px) {
+    .masonry {
+        -moz-column-count: 5;
+        -webkit-column-count: 5;
+        column-count: 5;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+	.hero-section{display:none;}
+.hero-section-mas{display:block;}
+	
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+.hero-section img {
+    width: 120%;
+}

@@ -1,4 +1,4 @@
-﻿@using(Html.BeginForm("Index", "Search", FormMethod.Get))
+﻿@*@using(Html.BeginForm("Index", "Search", FormMethod.Get))
 {
 	<div class="form-group search-form-group">
 		<input name="searchterm"
@@ -8,4 +8,15 @@
 			   type="text">
 		<input value="@Html.StringResource("search.go")" class="btn btn-default search-go" type="submit">
 	</div>
+}*@
+
+<div class="search_bar">
+@using (Html.BeginForm("Index", "Search", FormMethod.Get))
+{
+    <input type="text" name="searchterm"
+           class=""
+           aria-label="@Html.StringResource("search.prompt")"
+           placeholder="@Html.StringResource("search.prompt")"/>
+    <input type="submit" value=""/>
 }
+</div>

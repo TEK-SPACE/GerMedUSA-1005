@@ -1,0 +1,28 @@
+/* Medium Layout: 1280px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
+
+@media only screen and (max-width: 991px) {
+	h2#section-title {margin-top: 50px;}
+	.single_feature {text-align: center;}
+	.single_feature img {width: 100%;}
+	.single_feature h2 {padding: 10px 0px;}
+	
+}
+
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+	.left_header {text-align: center;}
+	.right_header {float: none;}
+	.search_bar input[type="text"] {width: 100%;}
+	
+}
+
+
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}

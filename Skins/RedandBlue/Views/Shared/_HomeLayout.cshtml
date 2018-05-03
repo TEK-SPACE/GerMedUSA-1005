@@ -1,0 +1,320 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <!--== Required meta tags ==-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come after these tags -->
+    <!--== Fill in the following meta tags ==-->
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <meta name="description" content="Description">
+    <meta name="author" content="Author">
+
+    <!--== Change the site title ==-->
+    <title>CerMedUSA</title>
+
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="~/Skins/RedandBlue/custom/img/favicon.ico" type="image/x-icon">
+
+    <!--== Bootstrap CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/bootstrap.min.css">
+
+    <!--== Font Awesome font CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/font-awesome.min.css">
+
+    <!--== Owl Carousel CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/owl.carousel.min.css">
+
+    <!--== Magnific pop-up CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/magnific-popup.css">
+
+    <!--== Animate css ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/animate.min.css">
+
+    <!--== Slicknav CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/slicknav.css">
+
+    <!--== Normalizer CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/normalize.css">
+
+    <!--== Theme Stylesheet ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/style.css">
+
+    <!--== Responsive CSS== -->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/responsive.css">
+
+    <!--== Modernizr JS== -->
+    <script src="~/Skins/RedandBlue/custom/js/modernizr-3.5.0.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    @Html.Partial("_BodyOpen")
+    <!--== Start Preloader ==-->
+    <!--== End Preloader ==-->
+    <!--== Start Home ==-->
+    <!--== End Home ==-->
+    <!--== Start Header section area ==-->
+    <header class="header">
+        <div class="container">
+            <div class="col-md-5 col-sm-5">
+                <div class="left_header">
+                    <a href="~/">
+                    <img src="~/Skins/RedandBlue/custom/img/logo.png" alt="GerMedUSA"/>
+                    </a>
+                    <h4>A Family business that treats Clients like a Family</h4>
+                </div>
+            </div>
+            <div class="col-md-7 col-sm-7">
+                <div class="right_header ">
+                    @Html.Partial(ViewNames.SearchPartial)
+                    <div class="mainmenu">
+                        <ul>
+                            <li><a href="~/">Home</a></li>
+                            <li><a href="~/t-about.aspx">About Us</a></li>
+                            <li><a href="#latest-news">News & Events</a></li>
+                            <li><a href="~/t-download.aspx">Downloads</a></li>
+                            <li><a href="#categories">Products</a></li>
+                            <li><a href="~/t-contact.aspx">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--== End Header section area ==-->
+    @Html.Partial("_Slider")
+
+    <!--== Start Slider section area ==-->
+@Html.Partial("_Categories")
+<div class="container">
+    <!-- Contents start -->
+    @RenderBody()
+    <!-- Contents end -->
+</div>
+    <!--== End Slider section area ==-->
+    <!--== Start about section area ==-->
+@Html.Partial("_Services")
+
+    <!--== End about section area ==-->
+    <!-- Tab section Start-->
+    <section class="home-content-top">
+        <div class="container">
+
+            <!--our-quality-shadow-->
+            <div class="clearfix"></div>
+            <div class="tabbable-panel margin-tops4 ">
+                <div class="tabbable-line">
+                    <ul class="nav nav-tabs tabtop  tabsetting">
+                        <li class="active"> <a href="#tab_default_1" data-toggle="tab"><img src="~/Skins/RedandBlue/custom/img/ic_search.png" alt="" /> New Products</a> </li>
+                        <li> <a href="#tab_default_2" data-toggle="tab"><img src="~/Skins/RedandBlue/custom/img/ic_photos.png" alt="" /> Promotions</a> </li>
+                        <li> <a href="#tab_default_3" data-toggle="tab"><img src="~/Skins/RedandBlue/custom/img/ic_video.png" alt="" class="ic_vid" />  Videos</a> </li>
+                        <li> <a href="#tab_default_4" data-toggle="tab"><img src="~/Skins/RedandBlue/custom/img/ic_download.png" alt="" />  DOWNLOADS</a> </li>
+                        <li> <a href="#tab_default_5" data-toggle="tab" class="thbada"><img src="~/Skins/RedandBlue/custom/img/ic_notify.png" alt="" />  NOTIFY ME</a> </li>
+                        <li> <a href="#tab_default_6" data-toggle="tab" class="thbada"><img src="~/Skins/RedandBlue/custom/img/ic_cal.png" alt="" />  MONTHLY OFFERS</a> </li>
+                        <li> <a href="#tab_default_7" data-toggle="tab" class="thbada"><img src="~/Skins/RedandBlue/custom/img/ic_cou.png" alt="" />  COUPONS</a> </li>
+                    </ul>
+                    <div class="tab-content margin-tops">
+                        <div class="tab-pane active fade in" id="tab_default_1">
+                            <div class="tab-slider-area owl-carousel owl-tab">
+                                @Html.XmlPackage("featuredproducts.xml.config")
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_default_2">
+                            <div class="tab-slider-area owl-carousel owl-tab">
+                                <div class="single-tab-slider">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="slider-tab-img">
+                                                <img src="~/Skins/RedandBlue/custom/img/scissors.png" class="img-responsive">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-sm-8">
+                                            <h4 class="heading4">Promotion Info</h4>
+                                            <p>Expetenda tincidunt in sed, ex partem placerat sea, porro commodo ex eam. His putant aeterno interesset at. Usu ea mundi tincidunt, omnium virtute aliquando ius ex. Ea aperiri sententiae duo. Usu nullam dolorum quaestio ei, vis animal legimus inimicus id.</p>
+                                            <a href="#">
+                                                <div class="btns"> <i class="fa fa-file-pdf-o"></i> Download review in PDF </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_default_3">
+                            <div class="tab-slider-area owl-carousel owl-tab">
+                                <div class="single-tab-slider">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="slider-tab-img">
+                                                <img src="~/Skins/RedandBlue/custom/img/scissors.png" class="img-responsive">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-sm-8">
+                                            <h4 class="heading4">Video Info</h4>
+                                            <p>Expetenda tincidunt in sed, ex partem placerat sea, porro commodo ex eam. His putant aeterno interesset at. Usu ea mundi tincidunt, omnium virtute aliquando ius ex. Ea aperiri sententiae duo. Usu nullam dolorum quaestio ei, vis animal legimus inimicus id.</p>
+                                            <a href="#">
+                                                <div class="btns"> <i class="fa fa-file-pdf-o"></i> Download review in PDF </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_default_4">
+                            <div class="tab-slider-area owl-carousel owl-tab">
+                                <div class="single-tab-slider">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="slider-tab-img">
+                                                <img src="~/Skins/RedandBlue/custom/img/scissors.png" class="img-responsive">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-sm-8">
+                                            <h4 class="heading4">Download Info</h4>
+                                            <p>Expetenda tincidunt in sed, ex partem placerat sea, porro commodo ex eam. His putant aeterno interesset at. Usu ea mundi tincidunt, omnium virtute aliquando ius ex. Ea aperiri sententiae duo. Usu nullam dolorum quaestio ei, vis animal legimus inimicus id.</p>
+                                            <a href="#">
+                                                <div class="btns"> <i class="fa fa-file-pdf-o"></i> Download review in PDF </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_default_5">
+                            <div class="tab-slider-area owl-carousel owl-tab">
+                                <div class="single-tab-slider">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="slider-tab-img">
+                                                <img src="~/Skins/RedandBlue/custom/img/scissors.png" class="img-responsive">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-sm-8">
+                                            <h4 class="heading4">Notify Me</h4>
+                                            <p>Expetenda tincidunt in sed, ex partem placerat sea, porro commodo ex eam. His putant aeterno interesset at. Usu ea mundi tincidunt, omnium virtute aliquando ius ex. Ea aperiri sententiae duo. Usu nullam dolorum quaestio ei, vis animal legimus inimicus id.</p>
+                                            <a href="#">
+                                                <div class="btns"> <i class="fa fa-file-pdf-o"></i> Download review in PDF </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_default_6">
+                            <div class="tab-slider-area owl-carousel owl-tab">
+                                <div class="single-tab-slider">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="slider-tab-img">
+                                                <img src="~/Skins/RedandBlue/custom/img/scissors.png" class="img-responsive">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-sm-8">
+                                            <h4 class="heading4">Monthly Offers</h4>
+                                            <p>Expetenda tincidunt in sed, ex partem placerat sea, porro commodo ex eam. His putant aeterno interesset at. Usu ea mundi tincidunt, omnium virtute aliquando ius ex. Ea aperiri sententiae duo. Usu nullam dolorum quaestio ei, vis animal legimus inimicus id.</p>
+                                            <a href="#">
+                                                <div class="btns"> <i class="fa fa-file-pdf-o"></i> Download review in PDF </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_default_7">
+                            <div class="tab-slider-area owl-carousel owl-tab">
+                                <div class="single-tab-slider">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="slider-tab-img">
+                                                <img src="~/Skins/RedandBlue/custom/img/scissors.png" class="img-responsive">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 col-sm-8">
+                                            <h4 class="heading4">Coupon Details</h4>
+                                            <p>Expetenda tincidunt in sed, ex partem placerat sea, porro commodo ex eam. His putant aeterno interesset at. Usu ea mundi tincidunt, omnium virtute aliquando ius ex. Ea aperiri sententiae duo. Usu nullam dolorum quaestio ei, vis animal legimus inimicus id.</p>
+                                            <a href="#">
+                                                <div class="btns"> <i class="fa fa-file-pdf-o"></i> Download review in PDF </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Tab section End-->
+<!--== Start Service section area ==-->
+@Html.Partial("_News")
+    
+<!--== End Service Section area ==-->
+    @Html.Partial("_Map")
+    @Html.Partial("_Contact")
+    <!--== End contact section area ==-->
+    <!--== Start Footer copyright section area ==-->
+    <section class="copyright_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>&copy; 2018 GerMedUSA . All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Footer copyright section area ==-->
+    <!--== jQuery ==-->
+    <script src="~/Skins/RedandBlue/custom/js/jquery-3.2.1.min.js"></script>
+
+    <!--== Bootstrap JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/bootstrap.min.js"></script>
+
+    <!--== Owl Carousel JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/owl.carousel.min.js"></script>
+
+    <!--== Isotope JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/isotope.pkgd.min.js"></script>
+
+    <!--== Skillbar JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/jquery.barfiller.js"></script>
+
+    <!--== Magnific pop-up JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/jquery.magnific-popup.min.js"></script>
+
+    <!--== Waypoints JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/jquery.waypoints.min.js"></script>
+
+    <!--== Counter up JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/jquery.counterup.min.js"></script>
+
+    <!--== Slicknav JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/jquery.slicknav.min.js"></script>
+
+    <!--== Wow JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/wow.min.js"></script>
+
+    <!--== Easing JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/jquery.easing.min.js"></script>
+
+    <!--== Scrolly JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/jquery.scrolly.js"></script>
+
+    <!--== Main JS ==-->
+    <script src="~/Skins/RedandBlue/custom/js/main.js"></script>
+    @Html.Partial("_BodyClose")
+</body>
+</html>

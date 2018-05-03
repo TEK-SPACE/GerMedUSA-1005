@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	@Html.Partial("_Head")
+    <!--== Favicon ==-->
+    <link rel="shortcut icon" href="~/Skins/RedandBlue/custom/img/favicon.ico" type="image/x-icon">
+
+    <!--== Bootstrap CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/bootstrap.min.css">
+
+    <!--== Font Awesome font CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/font-awesome.min.css">
+
+    <!--== Owl Carousel CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/owl.carousel.min.css">
+
+    <!--== Magnific pop-up CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/magnific-popup.css">
+
+    <!--== Animate css ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/animate.min.css">
+
+    <!--== Slicknav CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/slicknav.css">
+
+    <!--== Normalizer CSS ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/css/normalize.css">
+
+    <!--== Theme Stylesheet ==-->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/style.css">
+
+    <!--== Responsive CSS== -->
+    <link rel="stylesheet" href="~/Skins/RedandBlue/custom/responsive.css">
+    
+    <!--== jQuery ==-->
+    <script src="~/Skins/RedandBlue/custom/js/jquery-3.2.1.min.js"></script>
+
+    <!--== Modernizr JS== -->
+    <script src="~/Skins/RedandBlue/custom/js/modernizr-3.5.0.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	@Html.Partial("_BodyOpen")
+<header class="header">
+    <div class="container">
+        <div class="col-md-5 col-sm-5">
+            <div class="left_header">
+                <a href="~/">
+                    <img src="~/Skins/RedandBlue/custom/img/logo.png" alt="GerMedUSA"/>
+                </a>
+                <h4>A Family business that treats Clients like a Family</h4>
+            </div>
+        </div>
+        <div class="col-md-7 col-sm-7">
+            <div class="right_header ">
+                    @Html.Partial(ViewNames.SearchPartial)
+                <div class="mainmenu">
+                    <ul>
+                        <li><a href="~/">Home</a></li>
+                        <li><a href="~/t-about.aspx">About Us</a></li>
+                        @*<li><a href="#">News & Events</a></li>*@
+                        <li><a href="~/t-download.aspx">Downloads</a></li>
+                        @*<li><a href="#">Products</a></li>*@
+                        <li><a href="~/t-contact.aspx">Contact</a></li>
+                    </ul>
+                </div>
+                    <div class="col-sm-12 text-right-sm header-cart">
+                        @Html.Action(ActionNames.Index, ControllerNames.UserLinks)
+                    </div>
+            </div>
+        </div>
+    </div>
+</header>
+	<div class="background">
+		<div class="body-background">
+			<div class="container">
+				<div class="navbar navbar-default topnav" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand visible-xs menu-label" data-toggle="collapse" data-target="#top-nav-collapse" href="#">
+							@Html.StringResource("responsiveskin.menulabel")
+						</a>
+					</div>
+					<div class="navbar-collapse collapse" id="top-nav-collapse">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									@Html.StringResource("responsiveskin.categorymenulabel")
+									<span class="caret"></span>
+								</a>
+								@Html.XmlPackage("entitymenu", new { entitytype = "category" })
+							</li>
+							@*<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									@Html.StringResource("responsiveskin.manufacturermenulabel")
+									<span class="caret"></span>
+								</a>
+								@Html.XmlPackage("entitymenu", new { entitytype = "manufacturer" })
+							</li>*@
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									@Html.StringResource("responsiveskin.accountmenulabel")
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="@Url.Action(ActionNames.Index, ControllerNames.Account)">
+											@Html.StringResource("responsiveskin.accountlabel")
+										</a>
+									</li>
+									<li>
+										<a href="@Url.Action(ActionNames.Index, ControllerNames.Account)#OrderHistory">
+											@Html.StringResource("responsiveskin.orderhistorylabel")
+										</a>
+									</li>
+									@if(AppLogic.AppConfigBool("ShowWishButtons"))
+									{
+										<li>
+											<a href="#miniwish-modal" data-toggle="modal">
+												@Html.StringResource("responsiveskin.wishlistlabel")
+											</a>
+										</li>
+									}
+									<li class="divider"></li>
+									<li>
+										@Html.Action(ActionNames.LoginLinks, ControllerNames.UserLinks)
+									</li>
+								</ul>
+							</li>
+						</ul>
+						@*<div class="nav navbar-nav navbar-right navbar-form search-wrap">
+							@Html.Partial(ViewNames.SearchPartial)
+						</div>*@
+					</div>
+				</div>
+				<div class="notices">
+					@Html.Action(ActionNames.Index, ControllerNames.Notice)
+				</div>
+				@Html.Action(
+					actionName: "Detail",
+					controllerName: "Breadcrumb",
+					routeValues: new
+					{
+						PageTitle = ViewBag.PageTitle,
+						PathInfo = ViewBag.PathInfo
+					})
+				<div class="body-wrapper">
+					<!-- Contents start -->
+					@RenderBody()
+					<!-- Contents end -->
+				</div>
+			</div>
+		</div>
+		@*<div class="footer">
+			<div class="container">
+				@Html.Topic("Template.footer")
+				<div class="sub-footer">
+					@Html.Topic("Template.SubFooter")
+				</div>
+			</div>
+		</div>*@
+	</div>
+    @Html.Partial("_Contact")
+	<!-- Minicart modal -->
+	@Html.Action(ActionNames.Index, ControllerNames.Minicart, new { cartType = CartTypeEnum.ShoppingCart })
+
+	<!-- Miniwish modal -->
+	@Html.Action(ActionNames.Index, ControllerNames.Minicart, new { cartType = CartTypeEnum.WishCart })
+
+	<!-- Minicart and miniwish resources (javascript and overlay html) -->
+	@Html.Action(ActionNames.MinicartResources, ControllerNames.Minicart)
+<!--== Start Footer copyright section area ==-->
+<section class="copyright_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>&copy; 2018 GerMedUSA . All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--== End Footer copyright section area ==-->
+
+
+<!--== Bootstrap JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/bootstrap.min.js"></script>
+
+<!--== Owl Carousel JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/owl.carousel.min.js"></script>
+
+<!--== Isotope JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/isotope.pkgd.min.js"></script>
+
+<!--== Skillbar JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/jquery.barfiller.js"></script>
+
+<!--== Magnific pop-up JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/jquery.magnific-popup.min.js"></script>
+
+<!--== Waypoints JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/jquery.waypoints.min.js"></script>
+
+<!--== Counter up JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/jquery.counterup.min.js"></script>
+
+<!--== Slicknav JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/jquery.slicknav.min.js"></script>
+
+<!--== Wow JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/wow.min.js"></script>
+
+<!--== Easing JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/jquery.easing.min.js"></script>
+
+<!--== Scrolly JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/jquery.scrolly.js"></script>
+
+<!--== Main JS ==-->
+<script src="~/Skins/RedandBlue/custom/js/main.js"></script>
+	@Html.Partial("_BodyClose")
+</body>
+</html>
