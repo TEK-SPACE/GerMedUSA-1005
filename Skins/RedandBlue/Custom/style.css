@@ -91,7 +91,8 @@ a {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    color: #bfbfbf;
+    /*color: #bfbfbf;*/
+    color: #337ab7;
 }
 
 a:hover {
@@ -379,6 +380,12 @@ section.contact_area input,textarea {
 section.contact_area input#email{
 	    background-image:  url(img/email.png);
 	
+}
+section.contact_area input#phone {
+    background-image: url(img/call.png);
+}
+section.contact_area input#subject {
+    background-image: url(img/email.png);
 }
 section.contact_area input[type="submit"] {
     width: 160px;

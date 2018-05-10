@@ -1,22 +1,39 @@
-﻿<!--== Start contact section area ==-->
+﻿@model ContactUsRenderModel
+<!--== Start contact section area ==-->
 
 <section class="contact_area">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
-                <form action="">
-                    <div class="col-md-6">
-                        <input type="text" name="" id="name" placeholder="Name" />
-                    </div>
-                    <div class="col-md-6">
-                        <input type="email" name="" id="email" placeholder="Email" />
-                    </div>
-                    <div class="col-md-12">
-                        <textarea placeholder="Message"></textarea>
-                        <input type="submit" value="send" />
-                    </div>
-                </form>
+            <div class="contact-form">
+                <div class="col-md-8">
+                    @using (Ajax.BeginForm("Index", "ContactUs", null, new AjaxOptions { HttpMethod = "POST"}, new { }))
+                        {
+                        <div class="col-md-6">
+                            @Html.EditorEntryFor(m => m.From)
+                            @*@Html.TextBoxFor(m => m.From, htmlAttributes:new{ type="email", placeholder="Name", id = "name" })*@
+                        </div>
+                        <div class="col-md-6">
+                            @Html.EditorEntryFor(m => m.Subject)
+                            @*@Html.TextBoxFor(m => m.Subject, htmlAttributes:new{ type="text", placeholder="Subject", id = "subject" })*@
+                        </div>
+                        <div class="col-md-6">
+                            @Html.EditorEntryFor(m => m.Phone)
+                            @*@Html.TextBoxFor(m => m.Phone, htmlAttributes:new{ type="phone", placeholder="Phone", id = "phone" })*@
+                        </div>
+
+                        <div class="col-md-6">
+                            @Html.EditorEntryFor(m => m.Email)
+                            @*@Html.TextBoxFor(m => m.Email, htmlAttributes:new{ type="email", placeholder="Email", id="email"})*@
+                        </div>
+                        <div class="col-md-12">
+                            @Html.EditorEntryFor(m => m.Message)
+                            @*@Html.TextAreaFor(m=>m.Message, htmlAttributes: new{ placeholder = "Message" })*@
+                            <input type="submit" value="@Html.StringResource("common.cs.61")" />
+                        </div>
+                    }
+                </div>
             </div>
+
 
             <div class="col-md-4">
                 <div class="contact_details">
@@ -48,3 +65,5 @@
         </div>
     </div>
 </section>
+
+

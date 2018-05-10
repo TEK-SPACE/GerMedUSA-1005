@@ -1,36 +1,88 @@
 ﻿@model ContactUsRenderModel
 
 <div class="page-wrap contact-us-page">
-	<h1>
-		@Model.PageHeader
-	</h1>
+    @*<h1>
+            @Model.PageHeader
+        </h1>
 
-	<div class="page-row">
-		@Html.Topic("contact")
-	</div>
-	<div class="row">
-		<div class="col-md-6">
-			@using(Html.BeginForm())
-			{
-				<div class="form contact-form">
-					@Html.EditorEntryFor(m => m.From)
-					@Html.EditorEntryFor(m => m.Phone)
-					@Html.EditorEntryFor(m => m.Email)
-					@Html.EditorEntryFor(m => m.Subject)
-					@Html.EditorEntryFor(m => m.Message)
+    <div class="page-row">
+            @Html.Topic("contact")
+        </div>*@
+    <section class="contact_area">
+        <div class="container">
+            <div class="row">
+                <div class="contact-form">
+                    <div class="col-md-8">
+                        @using (Html.BeginForm())
+                        {
+                            <div class="col-md-6">
+                                @Html.EditorEntryFor(m => m.From)
+                                @*@Html.TextBoxFor(m => m.From, htmlAttributes:new{ type="email", placeholder="Name", id = "name" })*@
+                            </div>
+                            <div class="col-md-6">
+                                @Html.EditorEntryFor(m => m.Subject)
+                                @*@Html.TextBoxFor(m => m.Subject, htmlAttributes:new{ type="text", placeholder="Subject", id = "subject" })*@
+                            </div>
+                            <div class="col-md-6">
+                                @Html.EditorEntryFor(m => m.Phone)
+                                @*@Html.TextBoxFor(m => m.Phone, htmlAttributes:new{ type="phone", placeholder="Phone", id = "phone" })*@
+                            </div>
 
-					@if(Model.UseCaptcha)
-				{
-						@Html.CaptchaEntryFor(
-						expression: m => m.CaptchaCode,
-						scope: string.Concat(ControllerNames.ContactUs, ActionNames.Index))
-				}
+                            <div class="col-md-6">
+                                @Html.EditorEntryFor(m => m.Email)
+                                @*@Html.TextBoxFor(m => m.Email, htmlAttributes:new{ type="email", placeholder="Email", id="email"})*@
+                            </div>
+                            <div class="col-md-12">
+                                @Html.EditorEntryFor(m => m.Message)
+                                @*@Html.TextAreaFor(m=>m.Message, htmlAttributes: new{ placeholder = "Message" })*@
+                                <input type="submit" value="@Html.StringResource("common.cs.61")" />
+                                @*<div class="page-action-bar contact-us-actions">
+                            <input type="submit" class="btn btn-primary submit-contact-button" value="@Html.StringResource("common.cs.61")" />
+                        </div>*@
+                            </div>
+                        }
+                    </div>
+                </div>
 
-					<div class="page-action-bar contact-us-actions">
-						<input type="submit" class="btn btn-primary submit-contact-button" value="@Html.StringResource("common.cs.61")" />
-					</div>
-				</div>
-			}
-		</div>
-	</div>
+
+                    <div class="col-md-4">
+                        <div class="contact_details">
+                            <h2>Contact Us</h2>
+                            <span>
+                                <img src="~/Skins/RedandBlue/custom/img/map.png" alt="" />
+                                2417 Jerichco Turnpike, #333,<br />Garden City Park,<br />NY 11040 (USA).
+                            </span>
+                            <span>
+                                <img src="~/Skins/RedandBlue/custom/img/call.png" alt="" />
+                                800-330-1322 | +1(516) 997-2180
+                            </span>
+                            <span>
+                                <img src="~/Skins/RedandBlue/custom/img/fax.png" alt="" />
+                                800-260-7177 | +1(516) 358 2182
+                            </span>
+                            <span>
+                                <img src="~/Skins/RedandBlue/custom/img/sms.png" alt="" />
+                                sales@GerMedUSA.com
+                            </span>
+
+                            <ul>
+                                <li><a href="#"><img src="~/Skins/RedandBlue/custom/img/fb.png" alt="" /></a></li>
+                                <li><a href="#"><img src="~/Skins/RedandBlue/custom/img/tt.png" alt="" /></a></li>
+                                <li><a href="#"><img src="~/Skins/RedandBlue/custom/img/gp.png" alt="" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
 </div>
+
+<Script>
+    //$(document).read(function() {
+    //    $(".form-control .text-box .single-line").each(function(ele) {
+    //        $(ele).removeClass("form-control").removeClass("text-box").removeClass("single-line");
+    //    });
+    //})
+    $(".form-control").removeClass("form-control");
+    $(".contact-form").find(".form-label").hide();
+</Script>

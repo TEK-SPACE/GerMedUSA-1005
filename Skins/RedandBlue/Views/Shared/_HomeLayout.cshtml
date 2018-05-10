@@ -264,7 +264,7 @@
     
 <!--== End Service Section area ==-->
     @Html.Partial("_Map")
-    @Html.Partial("_Contact")
+    @Html.Partial("_Contact", new ContactUsRenderModel("", false))
     <!--== End contact section area ==-->
     <!--== Start Footer copyright section area ==-->
     <section class="copyright_area">
@@ -316,5 +316,11 @@
     <!--== Main JS ==-->
     <script src="~/Skins/RedandBlue/custom/js/main.js"></script>
     @Html.Partial("_BodyClose")
+    <Script>
+        $(function () {
+            $(".contact-form").find(".form-control").removeClass("form-control");
+            $(".contact-form").find(".form-label").hide();
+        });
+    </Script>
 </body>
 </html>
